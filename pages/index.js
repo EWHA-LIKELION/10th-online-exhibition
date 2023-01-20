@@ -1,3 +1,4 @@
+// 메인 페이지
 import Head from "next/head";
 import Image from "next/image";
 
@@ -13,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Image src={test} width={100} height={100} className="test" />
+      <p>메인 페이지</p>
     </>
   );
 }

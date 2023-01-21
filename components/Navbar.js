@@ -18,13 +18,11 @@ export default Navbar;
 // 이미지 실제 가로 : 320
 
 const NavDiv = styled.div`
-  border: 1px solid blue;
-
   position: relative;
 
   margin-top: 33px;
   width: 100%;
-  height: 46px;
+  height: 36px;
 
   img {
     @media screen and (min-width: 320px) {

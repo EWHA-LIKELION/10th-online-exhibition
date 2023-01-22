@@ -8,17 +8,19 @@ import navbar from "../assets/main/navbar2.svg";
 const Navbar = () => {
   return (
     <NavDiv>
-      <Image src={navbar} fill />
+      <img src={navbar.src} />
 
-      <Link href="/likelion">
-        <div className="second"></div>
-      </Link>
-      <Link href="/lions">
-        <div className="third"> </div>
-      </Link>
-      <Link href="/makers">
-        <div className="fourth"> </div>
-      </Link>
+      <div className="link">
+        <Link href="/likelion">
+          <div className="second"></div>
+        </Link>
+        <Link href="/lions">
+          <div className="third"> </div>
+        </Link>
+        <Link href="/makers">
+          <div className="fourth"> </div>
+        </Link>
+      </div>
     </NavDiv>
   );
 };
@@ -32,43 +34,49 @@ const NavDiv = styled.div`
 
   margin-top: 33px;
   width: 100%;
-  height: 36px;
+  height: 45px;
 
-  img {
-    @media screen and (min-width: 320px) {
-      transform: translateX(calc((100% - 320px) / 2 * (-1)));
-    }
-  }
-  div {
+  .link {
+    width: 95%;
+
     position: absolute;
-    width: 10px;
-    height: 36px;
+    top: 0;
+    left: 0;
+
+    //border: 1px solid blue;
+
+    display: flex;
+    justify-content: space-around;
   }
-  /* .first {
-    border: 1px solid red;
-    left: 15px;
-    width: 27px;
-    height: 30px;
-  } */
 
   .second {
-    border: 1px solid red;
+    //border: 1px solid red;
+
     left: 15px;
-    width: 120px;
+    width: 140px;
     height: 30px;
   }
 
   .third {
-    border: 1px solid red;
+    //border: 1px solid red;
     left: 155px;
     width: 71px;
     height: 30px;
   }
 
   .fourth {
-    border: 1px solid red;
+    //border: 1px solid red;
     left: 260px;
     width: 45px;
     height: 30px;
+  }
+
+  img {
+    //transform: translateX(calc((100% - 390px) / 2 * (-1)));
+    width: 95%;
+
+    /* @media screen and (min-width: 390px) {
+      transform: translateX(calc((100% - 390px) / 2 * (-1)));
+    } */
   }
 `;

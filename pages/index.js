@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Player from "../components/Player";
 import Footer from "../components/Footer";
+import Letter from "../components/Letter";
 // 이미지
 import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
@@ -16,8 +17,6 @@ import title from "../assets/main/title.svg";
 import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 
-import crayon from "../assets/main/crayon.svg";
-
 export default function Home() {
   return (
     <Div>
@@ -27,6 +26,7 @@ export default function Home() {
         <Player />
         <Image src={des1.src} width={230} height={22} className="des1" />
         <Image src={des2.src} width={215} height={14} className="des2" />
+
         <Footer />
       </Container>
 
@@ -35,7 +35,11 @@ export default function Home() {
         <img src={shadow.src} className="shadow" />
       </div>
 
-      <img src={paper.src} alt="paper" className="paper" />
+      <div style={{ position: "relative" }}>
+        <img src={paper.src} alt="paper" className="paper" />
+        <Letter top="224px" text="응원이 부적해 !" id="1" />
+        <Letter top="420px" text="이름하여 이름하다" id="2" />
+      </div>
     </Div>
   );
 }

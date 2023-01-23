@@ -9,12 +9,14 @@ import Footer from "../components/Footer";
 // 이미지
 import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
-import paper from "../assets/main/paper.png";
+import paper from "../assets/main/paper.svg";
 
 import title from "../assets/main/title.svg";
 
 import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
+
+import crayon from "../assets/main/crayon.svg";
 
 export default function Home() {
   return (
@@ -33,22 +35,7 @@ export default function Home() {
         <img src={shadow.src} className="shadow" />
       </div>
 
-      <Image
-        src={paper.src}
-        alt="paper"
-        width={390}
-        height={770}
-        className="paper"
-      />
-
-      {/* <Image src={shadow.src} alt="shadow" fill className="shadow" /> */}
-      {/* <Image
-        src={aurora.src}
-        alt="background"
-        width={390}
-        height={652}
-        className="background"
-      /> */}
+      <img src={paper.src} alt="paper" className="paper" />
     </Div>
   );
 }
@@ -94,7 +81,7 @@ const Div = styled.div`
 
   .shadow {
     position: absolute;
-    bottom: 0px;
+    bottom: -0px;
     left: 0;
     //transform: translateY(0px);
     width: 100%;

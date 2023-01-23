@@ -45,8 +45,6 @@ const Footer = () => {
 
 export default Footer;
 
-// 이미지 실제 가로 : 320
-
 const Container = styled.div`
   margin: 18px auto 11px auto;
 
@@ -75,6 +73,8 @@ const Icons = styled.div`
   }
 `;
 const FooterDiv = styled.div`
+  z-index: 1000;
+
   a {
     color: black;
     text-decoration: none;

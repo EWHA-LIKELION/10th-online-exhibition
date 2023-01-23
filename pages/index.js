@@ -5,6 +5,7 @@ import styled from "styled-components";
 // 컴포넌트
 import Navbar from "../components/Navbar";
 import Player from "../components/Player";
+import Footer from "../components/Footer";
 // 이미지
 import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
@@ -24,6 +25,7 @@ export default function Home() {
         <Player />
         <Image src={des1.src} width={230} height={22} className="des1" />
         <Image src={des2.src} width={215} height={14} className="des2" />
+        <Footer />
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
@@ -52,6 +54,17 @@ export default function Home() {
 }
 
 const Container = styled.div`
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  border: 1px red solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+
   .title {
     margin-top: 76px;
   }
@@ -62,15 +75,6 @@ const Container = styled.div`
   .des2 {
     margin-top: 13px;
   }
-  width: 100%;
-  height: auto;
-  position: absolute;
-  border: 1px red solid;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;
 const Div = styled.div`
   position: relative;

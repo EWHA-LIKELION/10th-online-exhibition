@@ -33,8 +33,8 @@ export default function Home() {
         <img src={shadow.src} className="shadow" />
       </div>
 
-      <div style={{ position: "relative", border: "1px solid red" }}>
-        <Footer />
+      <div style={{ position: "relative" }}>
+        <Footer isAbsolute={true} />
         <Image
           src={paper.src}
           alt="paper"

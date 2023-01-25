@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,9 +8,9 @@ import linktree from "../assets/icon/linktree.svg";
 import insta from "../assets/icon/insta.svg";
 import github from "../assets/icon/github.svg";
 
-const Footer = () => {
+const Footer = ({ isAbsolute }) => {
   return (
-    <FooterDiv>
+    <FooterDiv isAbsolute={isAbsolute}>
       <Container>
         <p className="about">More About Us</p>
 
@@ -46,9 +46,13 @@ const Footer = () => {
 export default Footer;
 
 const FooterDiv = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  ${(props) =>
+    props.isAbsolute &&
+    css`
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    `}
 
   z-index: 1000;
 

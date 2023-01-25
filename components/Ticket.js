@@ -9,7 +9,7 @@ import nameimg from "../assets/lions/namebackground.svg";
 import back from "../assets/topbar/back.svg";
 
 const Ticket = (arr) => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState([false, 0]);
 	console.log(arr);
 	const member = arr.arr;
 	return (
@@ -17,7 +17,7 @@ const Ticket = (arr) => {
 			{member &&
 				member.map((mem) => {
 					return (
-						<>
+						<Container key={mem.id}>
 							<TicketDiv>
 								<Image
 									src={ticketimg.src}
@@ -48,7 +48,7 @@ const Ticket = (arr) => {
 										<div className="detail-text">{mem.detail}</div>
 									</div>
 								</div>
-								<div className="right" onClick={() => setOpen(true)}>
+								<div className="right" onClick={() => setOpen([!open, mem.id])}>
 									<p className="green-text">활동 후기</p>
 									<div className="circle">
 										<Image
@@ -61,8 +61,10 @@ const Ticket = (arr) => {
 									</div>
 								</div>
 							</TicketDiv>
-							<TextDiv></TextDiv>
-						</>
+							<TextDiv
+								className={open.includes(mem.id) && open ? "open" : "close"}
+							></TextDiv>
+						</Container>
 					);
 				})}
 		</>
@@ -70,6 +72,40 @@ const Ticket = (arr) => {
 };
 
 export default Ticket;
+
+const Container = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.close {
+		margin-top: -150px;
+		@keyframes sizeScale {
+			0% {
+				margin-top: 0px;
+			}
+			100% {
+				margin-top: 150px;
+			}
+		}
+		animation-name: sizeScale;
+		animation-duration: 0.7s;
+	}
+	.open {
+		display: block;
+		margin-top: 0px;
+		@keyframes sizeScale {
+			0% {
+				margin-top: -150px;
+			}
+			100% {
+				margin-top: 0px;
+			}
+		}
+		animation-name: sizeScale;
+		animation-duration: 0.7s;
+	}
+`;
 
 const TicketDiv = styled.div`
 	width: 100%;
@@ -152,7 +188,8 @@ const TicketDiv = styled.div`
 `;
 
 const TextDiv = styled.div`
-	width: 320px;
+	display: none;
+	width: 315px;
 	height: 150px;
 	background-color: #f9fff8;
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);

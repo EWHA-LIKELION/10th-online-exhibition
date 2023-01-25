@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,9 +8,9 @@ import linktree from "../assets/icon/linktree.svg";
 import insta from "../assets/icon/insta.svg";
 import github from "../assets/icon/github.svg";
 
-const Footer = () => {
+const Footer = ({ isAbsolute }) => {
   return (
-    <FooterDiv>
+    <FooterDiv isAbsolute={isAbsolute}>
       <Container>
         <p className="about">More About Us</p>
 
@@ -45,34 +45,15 @@ const Footer = () => {
 
 export default Footer;
 
-const Container = styled.div`
-  margin: 18px auto 11px auto;
-
-  width: 310px;
-`;
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 15px;
-
-  .likelion-box {
-    display: flex;
-    p {
-      display: flex;
-      align-items: center;
-      margin-left: 8px;
-    }
-  }
-
-  .icon-box {
-    width: 93px;
-    display: flex;
-    justify-content: space-between;
-  }
-`;
 const FooterDiv = styled.div`
+  ${(props) =>
+    props.isAbsolute &&
+    css`
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    `}
+
   z-index: 1000;
 
   a {
@@ -84,11 +65,9 @@ const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
 
-  position: absolute;
-  bottom: 0;
-
   width: 100%;
   height: 130px;
+
   border-top: 1px solid #a5a5a5;
 
   p {
@@ -114,5 +93,39 @@ const FooterDiv = styled.div`
     font-weight: 400;
     font-size: 8px;
     color: #a5a5a5;
+  }
+
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    left: calc((100% - 390px) / 2);
+    //top: calc(1470px - 130px);
+  }
+`;
+
+const Container = styled.div`
+  margin: 18px auto 11px auto;
+
+  width: 310px;
+`;
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 15px;
+
+  .likelion-box {
+    display: flex;
+    p {
+      display: flex;
+      align-items: center;
+      margin-left: 8px;
+    }
+  }
+
+  .icon-box {
+    width: 93px;
+    display: flex;
+    justify-content: space-between;
   }
 `;

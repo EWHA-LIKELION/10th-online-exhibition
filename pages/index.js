@@ -45,11 +45,16 @@ export default function Home() {
 }
 
 const Container = styled.div`
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: 1470px;
+    border: 1px solid red;
+  }
   width: 100%;
   height: 100%;
 
   position: absolute;
-  border: 1px red solid;
+  //border: 1px red solid;
 
   display: flex;
   flex-direction: column;
@@ -68,7 +73,13 @@ const Container = styled.div`
   }
 `;
 const Div = styled.div`
-  position: relative;
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: 1470px;
+
+    border: 1px solid blue;
+  }
+
   width: auto;
   height: auto;
 

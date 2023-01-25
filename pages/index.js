@@ -26,8 +26,6 @@ export default function Home() {
         <Player />
         <Image src={des1.src} width={230} height={22} className="des1" />
         <Image src={des2.src} width={215} height={14} className="des2" />
-
-        <Footer />
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
@@ -35,8 +33,15 @@ export default function Home() {
         <img src={shadow.src} className="shadow" />
       </div>
 
-      <div style={{ position: "relative" }}>
-        <img src={paper.src} alt="paper" className="paper" />
+      <div style={{ position: "relative", border: "1px solid red" }}>
+        <Footer />
+        <Image
+          src={paper.src}
+          alt="paper"
+          className="paper"
+          width={390}
+          height={819}
+        />
         <Letter top="224px" text="응원이 부적해 !" id="1" />
         <Letter top="420px" text="이름하여 이름하다" id="2" />
       </div>
@@ -44,44 +49,14 @@ export default function Home() {
   );
 }
 
-const Container = styled.div`
-  @media screen and (min-width: 440px) {
-    width: 390px;
-    height: 1470px;
-    border: 1px solid red;
-  }
-  width: 100%;
+const Div = styled.div`
+  padding-bottom: 130px;
+  width: auto;
   height: 100%;
 
-  position: absolute;
-  //border: 1px red solid;
+  //border: 1px solid blue;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //justify-content: center;
-
-  .title {
-    margin-top: 76px;
-  }
-  .des1 {
-    margin-top: 46px;
-  }
-
-  .des2 {
-    margin-top: 13px;
-  }
-`;
-const Div = styled.div`
-  @media screen and (min-width: 440px) {
-    width: 390px;
-    height: 1470px;
-
-    border: 1px solid blue;
-  }
-
-  width: auto;
-  height: auto;
+  z-index: 1000;
 
   margin: 0;
   padding: 0;
@@ -104,6 +79,42 @@ const Div = styled.div`
 
   .paper {
     width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: 1470px;
+  }
+`;
+
+const Container = styled.div`
+  //border: solid 1px red;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+
+  .title {
+    margin-top: 76px;
+  }
+  .des1 {
+    margin-top: 46px;
+  }
+
+  .des2 {
+    margin-top: 13px;
+  }
+
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: 1470px;
+    //border: 1px solid red;
   }
 `;
 

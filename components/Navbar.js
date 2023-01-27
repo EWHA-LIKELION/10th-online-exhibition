@@ -30,6 +30,8 @@ export default Navbar;
 // 이미지 실제 가로 : 320
 
 const NavDiv = styled.div`
+  animation: slidein 0.8s ease-in;
+
   position: relative;
 
   margin-top: 33px;

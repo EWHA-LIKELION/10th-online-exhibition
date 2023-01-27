@@ -1,13 +1,139 @@
 .rotate {
   /* 애니매이션 이름, time period(속도) , ?, 영원히 */
-  animation: rotate_image 3s linear infinite;
+  animation: rotate_image 10s linear infinite;
 
   /* 회전의 중심 위치, 완전 원형으로 회전시키려면 이미지 파일의 정중아에 회전시키려는 중심이 위치해야하한다 */
   transform-origin: 50% 50%;
 }
 
+.fall {
+  animation: fall 5s infinite linear;
+}
+
 @keyframes rotate_image {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* animation:circlemove 1.5s infinite linear;*/
+@keyframes floating1 {
+  0%,
+  100% {
+    transform: translate(0%, -5%) rotate(-5deg);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating2 {
+  0%,
+  100% {
+    transform: translate(0%, -6%) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating2 {
+  0%,
+  100% {
+    transform: translate(0%, -6%) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating3 {
+  0%,
+  100% {
+    transform: translate(0%, -4%);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-right: 100%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
+
+/* 낙하 */
+/* @keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0, 1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+} */
+
+@keyframes fall {
+  /* 100% {
+    transform: translateY(0) rotate(3deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(3deg);
+    opacity: 0.1;
+  } */
+
+  0% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    margin-left: 45px;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+
+    opacity: 0;
+  }
+
+  /* 0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate(0, 0);
+  } */
+}
+
+@keyframes snow {
+  0% {
+    margin-top: 90px;
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    margin-left: 45px;
+  }
+  100% {
+    margin-top: 400px;
+    opacity: 0;
+  }
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-3deg);
   }
 }

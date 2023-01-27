@@ -8,10 +8,17 @@ import yellowstar from "../assets/main/yellowstar.svg";
 import bluestar from "../assets/main/bluestar.svg";
 import bluenote from "../assets/main/bluenote.svg";
 import pinknote from "../assets/main/pinknote.svg";
+import confetti from "../assets/main/confetti.svg";
+import test from "../assets/main/test.svg";
+import test2 from "../assets/main/test2.svg";
 
 const Player = () => {
   return (
     <Div>
+      <img src={test.src} className="test" />
+      <img src={test2.src} className="test2" />
+
+      <Image src={confetti.src} width={324} height={451} className="confetti" />
       <Image src={player.src} width={148} height={112} className="player" />
       <Image src={pink.src} width={91} height={81} className="pink" />
       <Image src={blue.src} width={100} height={96} className="blue" />
@@ -34,10 +41,37 @@ export default Player;
 const Div = styled.div`
   width: 153px;
   height: 153px;
-
   margin-top: 30px;
-
   position: relative;
+
+  .test {
+    position: absolute;
+    bottom: -150px;
+    width: 7px;
+    height: 7px;
+
+    //animation: fall 5s infinite linear;
+
+    //animation: fall 5s infinite linear;
+    transform: translateY(-400px);
+    animation: fall 10s ease 0s infinite;
+  }
+
+  .test2 {
+    position: absolute;
+    bottom: -150px;
+    left: 100px;
+    width: 7px;
+    height: 7px;
+    //animation: rotate_image 2s infinite linear;
+  }
+
+  .confetti {
+    position: absolute;
+    //border: 1px red solid;
+    left: -85px;
+    top: -145px;
+  }
   .player {
     position: absolute;
     bottom: 0;
@@ -51,6 +85,7 @@ const Div = styled.div`
     bottom: 50px;
     left: 20px;
     filter: drop-shadow(3px 11px 12px rgba(0, 0, 0, 0.1));
+    animation: floating1 2s infinite linear;
   }
 
   .blue {
@@ -58,6 +93,7 @@ const Div = styled.div`
     bottom: 70px;
     left: 22px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    animation: floating2 3s infinite linear;
   }
 
   .yellowstar {
@@ -65,18 +101,21 @@ const Div = styled.div`
     bottom: 30px;
     left: -50px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    animation: floating3 2s infinite linear;
   }
   .bluestar {
     position: absolute;
     top: 5px;
     right: -20px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    animation: floating3 2s infinite linear;
   }
   .bluenote {
     position: absolute;
     bottom: 90px;
     left: -45px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    animation: floating3 2s infinite ease;
   }
 
   .pinknote {
@@ -84,5 +123,6 @@ const Div = styled.div`
     bottom: 30px;
     right: -40px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    animation: floating3 2s infinite ease;
   }
 `;

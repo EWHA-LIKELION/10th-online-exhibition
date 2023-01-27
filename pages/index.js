@@ -11,9 +11,7 @@ import Letter from "../components/Letter";
 import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
 import paper from "../assets/main/paper.svg";
-
 import title from "../assets/main/title.svg";
-
 import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 

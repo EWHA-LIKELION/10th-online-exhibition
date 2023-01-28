@@ -9,14 +9,23 @@ import bluestar from "../assets/main/bluestar.svg";
 import bluenote from "../assets/main/bluenote.svg";
 import pinknote from "../assets/main/pinknote.svg";
 import confetti from "../assets/main/confetti.svg";
-import test from "../assets/main/test.svg";
-import test2 from "../assets/main/test2.svg";
+//컴포넌트
+import Confetti from "./Confetti";
+import { ConfettiArray } from "../assets/confetti/confettiArray";
 
 const Player = () => {
   return (
     <Div>
-      <img src={test.src} className="test" />
-      <img src={test2.src} className="test2" />
+      {ConfettiArray.map((con) => {
+        return (
+          <Confetti
+            bottom={con.bottom}
+            left={con.left}
+            ani={con.ani}
+            src={con.src}
+          />
+        );
+      })}
 
       <Image src={confetti.src} width={324} height={451} className="confetti" />
       <Image src={player.src} width={148} height={112} className="player" />
@@ -43,32 +52,8 @@ const Div = styled.div`
   height: 153px;
   margin-top: 30px;
   position: relative;
-
-  .test {
-    position: absolute;
-    bottom: -150px;
-    width: 7px;
-    height: 7px;
-
-    //animation: fall 5s infinite linear;
-
-    //animation: fall 5s infinite linear;
-    transform: translateY(-400px);
-    animation: fall 10s ease 0s infinite;
-  }
-
-  .test2 {
-    position: absolute;
-    bottom: -150px;
-    left: 100px;
-    width: 7px;
-    height: 7px;
-    //animation: rotate_image 2s infinite linear;
-  }
-
   .confetti {
     position: absolute;
-    //border: 1px red solid;
     left: -85px;
     top: -145px;
   }

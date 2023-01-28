@@ -27,7 +27,7 @@ export default function Home() {
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
-        <img src={aurora.src} className="test" />
+        <img src={aurora.src} className="aurora" />
         <img src={shadow.src} className="shadow" />
       </div>
 
@@ -51,15 +51,12 @@ const Div = styled.div`
   padding-bottom: 130px;
   width: auto;
   height: 100%;
-
   //border: 1px solid blue;
-
   z-index: 1000;
-
   margin: 0;
   padding: 0;
 
-  .test {
+  .aurora {
     width: 100%;
   }
 

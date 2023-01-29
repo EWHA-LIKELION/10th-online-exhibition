@@ -8,9 +8,9 @@ import Footer from '../components/Footer';
 
 // 이미지
 import aurora from '../assets/main/aurora3.svg';
-import arrowline from '../assets/makers/arrowline.svg';
-import subtract from '../assets/makers/subtract.svg';
-import whitearrow from '../assets/makers/whitearrow.png';
+import arrowline from '../assets/likelion/arrowline.svg';
+import subtract from '../assets/likelion/subtract.svg';
+import whitearrow from '../assets/likelion/whitearrow.png';
 
 const Likelion = () => {
   // 인스타그램 링크 이동

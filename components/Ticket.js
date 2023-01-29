@@ -4,12 +4,11 @@ import React, { useState } from "react";
 
 import ticketimg from "../assets/lions/ticket.svg";
 import faceimg from "../assets/lions/testface.png";
-import topimg from "../assets/lions/testtop.png";
 import nameimg from "../assets/lions/namebackground.svg";
 import back from "../assets/topbar/back.svg";
 
 const Ticket = (arr) => {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState([false, 0]);
 	console.log(arr);
 	const member = arr.arr;
 	return (
@@ -18,50 +17,61 @@ const Ticket = (arr) => {
 				member.map((mem) => {
 					return (
 						<>
-							<TicketDiv>
-								<Image
-									src={ticketimg.src}
-									width={360}
-									height={115}
-									className="ticket"
-									alt="ticket"
-								/>
-								<div className="left">
+							<Container key={mem.id}>
+								<TicketDiv>
 									<Image
-										src={faceimg.src}
-										width={100}
-										height={100}
-										className="face"
-										alt="Memoji face"
+										src={ticketimg.src}
+										width={360}
+										height={110}
+										alt="ticket"
+										className="ticket"
 									/>
-									<div>
-										<div className="name-container">
+									<div className="left">
+										<div className="face-rect">
 											<Image
-												src={nameimg.src}
-												width={76}
-												height={32}
-												className="name-img"
-												alt="name background"
+												src={faceimg.src}
+												width={100}
+												height={100}
+												className="face"
+												alt="Memoji face"
 											/>
-											<p className="name-text">{mem.name}</p>
 										</div>
-										<div className="detail-text">{mem.detail}</div>
+										<div className="info-rect">
+											<div className="name-container">
+												<Image
+													src={nameimg.src}
+													width={76}
+													height={32}
+													className="name-img"
+													alt="name background"
+												/>
+												<p className="name-text">{mem.name}</p>
+											</div>
+											<div className="detail-text">{mem.detail}</div>
+										</div>
 									</div>
-								</div>
-								<div className="right" onClick={() => setOpen(true)}>
-									<p className="green-text">활동 후기</p>
-									<div className="circle">
-										<Image
-											src={back.src}
-											width={5}
-											height={10}
-											className="down"
-											alt="down"
-										/>
+									<div
+										className="right"
+										onClick={() => setOpen([!open, mem.id])}
+									>
+										<p className="green-text">활동 후기</p>
+										<div className="circle">
+											<Image
+												src={back.src}
+												width={5}
+												height={10}
+												className="down"
+												alt="down"
+											/>
+										</div>
 									</div>
-								</div>
-							</TicketDiv>
-							<TextDiv></TextDiv>
+								</TicketDiv>
+								<TextDiv
+									className={open.includes(mem.id) && open ? "open" : "close"}
+								>
+									<div className="text-text">{mem.text}</div>
+								</TextDiv>
+							</Container>
 						</>
 					);
 				})}
@@ -71,42 +81,92 @@ const Ticket = (arr) => {
 
 export default Ticket;
 
-const TicketDiv = styled.div`
+const Container = styled.div`
 	width: 100%;
-	height: 115px;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 10px;
+	flex-direction: column;
+	.close {
+		display: none;
+	}
+	.open {
+		display: block;
+		@keyframes out {
+			0% {
+				margin-top: -150px;
+				opacity: 0;
+			}
+			45% {
+				opacity: 0;
+			}
+			100% {
+				margin-top: 0px;
+				opacity: 1;
+			}
+		}
+		animation-name: out;
+		animation-duration: 0.7s;
+	}
+`;
+
+const TicketDiv = styled.div`
+	width: 90%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	position: relative;
 	.ticket {
-		position: relative;
+		position: absolute;
+		width: 100%;
 	}
 	.left,
 	.right {
-		position: absolute;
-		z-index: 5;
+		position: relative;
 	}
 	.left {
-		height: 100px;
-		left: 35px;
+		width: 90%;
+		height: 100%;
 		display: flex;
+		align-items: center;
 	}
 	.right {
+		width: 40px;
 		height: 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		left: 317px;
+		position: absolute;
+		right: 10px;
+	}
+	.face-rect {
+		width: auto;
+		height: 100%;
+		position: relative;
+		margin: 0 0 5px 10px;
+	}
+	.face {
+		max-width: 90%;
+		height: auto;
+	}
+	.info-rect {
+		width: 48%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0;
 	}
 	.name-container {
-		width: 150px;
+		width: 80px;
+		height: 35px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		position: absolute;
-		top: 25px;
-		left: 75px;
+		position: relative;
 		.name-img {
 			position: absolute;
 		}
@@ -117,6 +177,7 @@ const TicketDiv = styled.div`
 			text-align: center;
 			color: #000;
 			position: relative;
+			margin-bottom: 2px;
 		}
 	}
 	.detail-text {
@@ -124,12 +185,10 @@ const TicketDiv = styled.div`
 		font-size: 12px;
 		font-weight: 400;
 		color: #000;
-		display: flex;
-		align-items: center;
 		width: 140px;
 		height: 30px;
 		word-break: keep-all;
-		margin: 58px 0 0 15px;
+		margin: 15px 0 0 5px;
 	}
 	.green-text {
 		font-family: "Pretendard-Regular";
@@ -152,10 +211,23 @@ const TicketDiv = styled.div`
 `;
 
 const TextDiv = styled.div`
-	width: 320px;
-	height: 150px;
+	position: relative;
+	width: 78%;
+	height: auto;
 	background-color: #f9fff8;
 	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 	border-radius: 0 0 20px 20px;
-	margin-bottom: 10px;
+	margin: 3px 0 10px 0;
+	.text-text {
+		font-family: "Pretendard-Regular";
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 400;
+		color: #000;
+		display: flex;
+		align-items: center;
+		width: 90%;
+		word-break: break-all;
+		margin: 10px 0 12px 15px;
+	}
 `;

@@ -1,0 +1,51 @@
+@keyframes fall {
+  0% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    margin-left: 45px;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fall2 {
+  0% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    margin-right: 45px;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes fall3 {
+  0% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 1;
+    margin-right: 40px;
+  }
+  80% {
+    opacity: 0.5;
+    margin-left: 35px;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}

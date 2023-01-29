@@ -34,9 +34,9 @@ const Makers = () => {
 						setTeam(activeIndex);
 					}}
 				>
-					{data.map((d) => {
+					{data.map((d, index) => {
 						return (
-							<SwiperSlide>
+							<SwiperSlide key={d + index}>
 								<div className="inner">
 									<Image src={d.img} width={268} height={222} />
 									<div className="border" />
@@ -102,6 +102,10 @@ const Container = styled.div`
 				width: 276px;
 				height: 0px;
 				border: 1px solid #e4e4e4;
+			}
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
 	}

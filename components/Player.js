@@ -19,7 +19,7 @@ const Player = () => {
       {ConfettiArray.map((con) => {
         return (
           <Confetti
-            id={con.id}
+            key={con.id}
             bottom={con.bottom}
             left={con.left}
             ani={con.ani}

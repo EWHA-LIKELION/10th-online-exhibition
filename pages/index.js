@@ -11,9 +11,7 @@ import Letter from "../components/Letter";
 import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
 import paper from "../assets/main/paper.svg";
-
 import title from "../assets/main/title.svg";
-
 import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 
@@ -29,7 +27,7 @@ export default function Home() {
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
-        <img src={aurora.src} className="test" />
+        <img src={aurora.src} className="aurora" />
         <img src={shadow.src} className="shadow" />
       </div>
 
@@ -53,15 +51,12 @@ const Div = styled.div`
   padding-bottom: 130px;
   width: auto;
   height: 100%;
-
   //border: 1px solid blue;
-
   z-index: 1000;
-
   margin: 0;
   padding: 0;
 
-  .test {
+  .aurora {
     width: 100%;
   }
 

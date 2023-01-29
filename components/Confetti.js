@@ -1,6 +1,6 @@
 import styled from "styled-components";
-const Confetti = ({ bottom, left, ani, src }) => {
-  return <Con src={src.src} bottom={bottom} left={left} ani={ani} />;
+const Confetti = ({ id, bottom, left, ani, src }) => {
+  return <Con key={id} src={src.src} bottom={bottom} left={left} ani={ani} />;
 };
 
 export default Confetti;

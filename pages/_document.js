@@ -21,6 +21,8 @@ export default function Document() {
           content="이화여대 멋쟁이사자처럼 10기 전시사이트"
         />
         <meta name="og:title" content="Likelion EWHA 10th" />
+        <meta property="twitter:title" content="Likelion EWHA 10th" />
+
         <meta
           name="og:description"
           content="이화여대 멋쟁이사자처럼 10기의 프로젝트를 만나보세요."
@@ -31,6 +33,7 @@ export default function Document() {
           property="og:image"
           content="https://likelion-ewha-10th.vercel.app/default.png"
         />
+
         <link rel="icon" href="/favicon.png" />
       </Head>
 

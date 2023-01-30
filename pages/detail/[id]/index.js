@@ -35,6 +35,7 @@ const Detail = (props) => {
             width={300}
             height={100}
             className="titleimg"
+            alt="titleimg"
           />
         </TopBar>
         <Slider />
@@ -91,12 +92,14 @@ const Detail = (props) => {
               width={50}
               height={50}
               className="techicon"
+              alt="techicon"
             />
             <Image
               src={Techdata[id - 1].data[0].tech[1].src}
               width={50}
               height={50}
               className="techicon"
+              alt="techicon"
             />
           </Tech>
         </div>
@@ -106,7 +109,13 @@ const Detail = (props) => {
           <Link href={Introducedata[id - 1].url}>
             <VisitBtn>
               <p>웹사이트 방문하기</p>
-              <Image src={btnicon.src} width={20} height={20} className="btn" />
+              <Image
+                src={btnicon.src}
+                width={20}
+                height={20}
+                className="btn"
+                alt="btn"
+              />
             </VisitBtn>
           </Link>
         </div>

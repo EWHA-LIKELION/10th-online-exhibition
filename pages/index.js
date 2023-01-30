@@ -1,7 +1,6 @@
 // 메인 페이지
 import Image from "next/image";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 // 컴포넌트
 import Navbar from "../components/Navbar";
 import Player from "../components/Player";
@@ -29,6 +28,7 @@ export default function Home() {
           className="title"
           loading="lazy"
           blurDataURL={base64}
+          alt="title"
         />
         <Player />
         <Image
@@ -38,6 +38,7 @@ export default function Home() {
           className="des1"
           loading="lazy"
           blurDataURL={base64}
+          alt="description"
         />
         <Image
           src={des2.src}
@@ -46,6 +47,7 @@ export default function Home() {
           className="des2"
           loading="lazy"
           blurDataURL={base64}
+          alt="description"
         />
       </Container>
 
@@ -92,7 +94,6 @@ const Div = styled.div`
     position: absolute;
     bottom: -0px;
     left: 0;
-    //transform: translateY(0px);
     width: 100%;
   }
 
@@ -108,7 +109,6 @@ const Div = styled.div`
 `;
 
 const Container = styled.div`
-  //border: solid 1px red;
   width: 100%;
   height: 100%;
 
@@ -117,7 +117,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  //justify-content: center;
 
   .title {
     margin-top: 76px;
@@ -133,17 +132,5 @@ const Container = styled.div`
   @media screen and (min-width: 440px) {
     width: 390px;
     height: 1470px;
-    //border: 1px solid red;
   }
 `;
-
-// const Test = styled.div`
-//   position: relative;
-
-//   width: 100%;
-//   height: 695px;
-
-//   background-image: url(${aurora.src});
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// `;

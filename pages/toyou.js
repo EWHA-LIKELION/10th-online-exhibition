@@ -63,7 +63,7 @@ const Toyou = ({ posts }) => {
 export default Toyou;
 
 export async function getStaticProps() {
-  const res = await fetch("http://127.0.0.1:5000/toyou");
+  const res = await fetch("https://likelion.pythonanywhere.com/toyou");
   const posts = await res.json();
 
   return {

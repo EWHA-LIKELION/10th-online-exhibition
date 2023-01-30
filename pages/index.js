@@ -1,7 +1,7 @@
 // 메인 페이지
-import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 // 컴포넌트
 import Navbar from "../components/Navbar";
 import Player from "../components/Player";
@@ -16,14 +16,37 @@ import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 
 export default function Home() {
+  const base64 =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Vw8AAkEBX6r220kAAAAASUVORK5CYII=";
   return (
     <Div>
       <Container>
         <Navbar />
-        <Image src={title.src} width={270} height={84} className="title" />
+        <Image
+          src={title.src}
+          width={270}
+          height={84}
+          className="title"
+          loading="lazy"
+          blurDataURL={base64}
+        />
         <Player />
-        <Image src={des1.src} width={230} height={22} className="des1" />
-        <Image src={des2.src} width={215} height={14} className="des2" />
+        <Image
+          src={des1.src}
+          width={230}
+          height={22}
+          className="des1"
+          loading="lazy"
+          blurDataURL={base64}
+        />
+        <Image
+          src={des2.src}
+          width={215}
+          height={14}
+          className="des2"
+          loading="lazy"
+          blurDataURL={base64}
+        />
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
@@ -39,6 +62,8 @@ export default function Home() {
           className="paper"
           width={390}
           height={819}
+          loading="lazy"
+          blurDataURL={base64}
         />
         <Letter top="224px" text="응원이 부적해 !" id="1" />
         <Letter top="420px" text="이름하여 이름하다" id="2" />
@@ -51,7 +76,6 @@ const Div = styled.div`
   padding-bottom: 130px;
   width: auto;
   height: 100%;
-  //border: 1px solid blue;
   z-index: 1000;
   margin: 0;
   padding: 0;

@@ -1,6 +1,6 @@
 // 만든이들 페이지
 import styled from "styled-components";
-import { use, useEffect, useState } from "react";
+import { useState } from "react";
 // import Components
 import Image from "next/image";
 // import Images
@@ -30,7 +30,7 @@ const Toyou = ({ posts }) => {
 
             {lett.map((post) => {
               return (
-                <Letter key={post.name}>
+                <Letter key={post.id}>
                   <div className="name">from. {post.name}</div>{" "}
                   <div className="body">{post.body}</div>
                 </Letter>
@@ -174,15 +174,4 @@ const Container = styled.div`
     margin-bottom: 9px;
     font-weight: 900;
   }
-`;
-
-const Title = styled.div`
-  // margin-top: 170px;
-  font-family: "Pretendard-Regular";
-  font-weight: 300;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 `;

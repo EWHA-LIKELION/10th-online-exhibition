@@ -20,7 +20,7 @@ const Toyou = ({ posts }) => {
       {pw === posts.pw.toString() ? (
         <Div>
           <Container>
-            <Image src={secret.src} fill className="back" />
+            <Image src={secret.src} fill className="back" alt="back" />
 
             <p className="title">ToYou</p>
             <div>

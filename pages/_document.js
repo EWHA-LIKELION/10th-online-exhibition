@@ -4,15 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-BYH2FCDETR"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-BYH2FCDETR');
-        </script>
         <title>Likelion EWHA 10th</title>
         <meta name="theme-color" content="#00664F" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

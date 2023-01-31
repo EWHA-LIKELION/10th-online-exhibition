@@ -19,7 +19,7 @@ export default function Document() {
         />
         <meta
           property="og:description"
-          content="🦁이대 멋사의 프로젝트 구경하기!"
+          content="이대 멋사의 프로젝트를 만나보세요🦁"
         />
         <meta
           property="og:site_name"

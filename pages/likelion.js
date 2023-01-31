@@ -8,9 +8,8 @@ import Footer from '../components/Footer';
 
 // 이미지
 import aurora from '../assets/main/aurora3.svg';
-import arrowline from '../assets/likelion/arrowline.svg';
-import subtract from '../assets/likelion/subtract.svg';
-import whitearrow from '../assets/likelion/whitearrow.png';
+import subtract from '../assets/likelion/subtract2.svg';
+import whitearrow from '../assets/likelion/whitearrow.svg';
 
 const Likelion = () => {
   // 인스타그램 링크 이동
@@ -71,39 +70,112 @@ const Likelion = () => {
             </MiniTitle>
             <div className='boldtext'>트랙공통</div>
             <TrackBox start='left'>
-              <img className='subtract' src={subtract.src} />
-              <img className='arrow1' src={arrowline.src} />
-              <img className='arrow2' src={arrowline.src} />
-              <img className='arrow3' src={arrowline.src} />
-              <TextBox left='15vw'>
-                <div className='title'>HTML&CSS</div>
-                <div className='content'>어쩌구저쩌구 내용</div>
-              </TextBox>
-              <TextBox left='55vw'>
-                <div className='title'>HTML&CSS</div>
-                <div className='content'>어쩌구저쩌구 내용</div>
-              </TextBox>
+              <img className='subtract' src={subtract.src}></img>
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
             </TrackBox>
             <TrackBox start='right'>
               <img className='subtract' src={subtract.src} />
-              <Arrows>
-                <img className='arrow1' src={arrowline.src} />
-                <img className='arrow2' src={arrowline.src} />
-                <img className='arrow3' src={arrowline.src} />
-              </Arrows>
-
-              <TextBox left='22vw'>
-                <div className='title'>HTML&CSS</div>
-                <div className='content'>어쩌구저쩌구 내용</div>
-              </TextBox>
-              <TextBox left='62vw'>
-                <div className='title'>HTML&CSS</div>
-                <div className='content'>어쩌구저쩌구 내용</div>
-              </TextBox>
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
             </TrackBox>
             <div className='boldtext'>기획·디자인</div>
+            <TrackBox start='left'>
+              <img className='subtract' src={subtract.src}></img>
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start='right'>
+              <img className='subtract' src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
             <div className='boldtext'>프론트엔드</div>
+            <TrackBox start='left'>
+              <img className='subtract' src={subtract.src}></img>
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start='right'>
+              <img className='subtract' src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
             <div className='boldtext'>백엔드</div>
+            <TrackBox start='left'>
+              <img className='subtract' src={subtract.src}></img>
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start='right'>
+              <img className='subtract' src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+                <TextBox>
+                  <div className='title'>HTML&CSS</div>
+                  <div className='content'>어쩌구저쩌구 내용</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
             <WarningText>*10기 기준이며 11기는 상이할 수 있습니다.</WarningText>
           </TextWrapper>
           <TextWrapper>
@@ -137,8 +209,8 @@ const Likelion = () => {
             </div>
           </Recruiting>
         </Background>
+        <Footer />
       </Container>
-      <Footer />
     </>
   );
 };
@@ -149,6 +221,8 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  overflow: hidden;
 `;
 
 const ImageWrapper = styled.div`
@@ -187,7 +261,7 @@ const Background = styled.div`
     top: 0;
 
     position: absolute;
-    z-index: -1;
+    z-index: -10;
     opacity: 53%;
   }
 `;
@@ -240,7 +314,7 @@ const DottedLine = styled.div`
 `;
 
 const TrackBox = styled.div`
-  border: solid 1px;
+  /* border: solid 1px; */
   display: flex;
   position: static;
   align-items: center;
@@ -251,37 +325,24 @@ const TrackBox = styled.div`
 
   .subtract {
     position: absolute;
-    z-index: 0;
+    z-index: -1;
     filter: drop-shadow(1px 2px 3px #a0a0a0);
   }
 `;
 
-const Arrows = styled.div`
-  .arrow1 {
-    position: absolute;
-    z-index: 1;
-    margin-left: 32vw;
-  }
-
-  .arrow2 {
-    position: absolute;
-    z-index: 1;
-    margin-left: 34vw;
-  }
-
-  .arrow3 {
-    position: absolute;
-    z-index: 1;
-    margin-left: 280px;
-  }
+const TrackBox2 = styled.div`
+  display: flex;
+  width: 305px;
+  justify-content: space-around;
 `;
 
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  font-family: 'Pretendard-Regular';
 
+  font-family: 'Pretendard-Regular';
+  align-items: center;
+  justify-content: center;
   .title {
     font-size: 12px;
     font-weight: 600;

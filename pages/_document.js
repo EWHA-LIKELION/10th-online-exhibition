@@ -7,32 +7,33 @@ export default function Document() {
         <title>Likelion EWHA 10th</title>
         <meta name="theme-color" content="#00664F" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <meta name="og:url" content="https://likelion-ewha-10th.vercel.app" />
+        <meta name="og:title" content="Likelion EWHA 10th" />
         <meta
-          name="description"
-          content="이화여대 멋쟁이사자처럼 10기 전시사이트"
+          name="og:description"
+          content="이화여대 멋쟁이사자처럼 10기의 프로젝트를 만나보세요."
         />
+
+        <meta name="og:type" content="website" />
         <meta
-          name="keywords"
-          content="이화여대,멋쟁이사자처럼,웹,개발자,프론트엔드,백엔드,개발,컴공"
+          property="og:image"
+          content="https://likelion-ewha-10th.vercel.app/default.png"
         />
         <meta
           name="og:site_name"
           content="이화여대 멋쟁이사자처럼 10기 전시사이트"
         />
-        <meta name="og:title" content="Likelion EWHA 10th" />
-        <meta property="twitter:title" content="Likelion EWHA 10th" />
 
         <meta
-          name="og:description"
-          content="이화여대 멋쟁이사자처럼 10기의 프로젝트를 만나보세요."
+          name="keywords"
+          content="이화여대,멋쟁이사자처럼,웹,개발자,프론트엔드,백엔드,개발,컴공"
         />
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://likelion-ewha-10th.vercel.app" />
         <meta
-          property="og:image"
-          content="https://likelion-ewha-10th.vercel.app/default.png"
+          name="description"
+          content="이화여대 멋쟁이사자처럼 10기 전시사이트"
         />
+
+        <meta property="twitter:title" content="Likelion EWHA 10th" />
 
         <link rel="icon" href="/favicon.png" />
       </Head>

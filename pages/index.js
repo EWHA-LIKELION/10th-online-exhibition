@@ -21,7 +21,7 @@ export default function Home() {
     <Div>
       <Container>
         <Navbar />
-        <object type="image/svg+xml" data="title.svg">
+        <object type="image/svg+xml" data={title}>
           <Image
             src={title.src}
             width={270}

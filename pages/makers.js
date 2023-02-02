@@ -1,71 +1,71 @@
 // 만든이들 페이지
-import react from 'react';
-import styled from 'styled-components';
+import react from "react";
+import styled from "styled-components";
 
 // import Components
-import TopBar from '../components/TopBar';
-import Footer from '../components/Footer';
+import TopBar from "../components/TopBar";
+import Footer from "../components/Footer";
 
 // import Images
-import makers1 from '../assets/makers/makers1.svg';
-import makers2 from '../assets/makers/makers2.svg';
-import makers3 from '../assets/makers/makers3.svg';
-import makers4 from '../assets/makers/makers4.svg';
-import makers5 from '../assets/makers/makers5.svg';
-import makers6 from '../assets/makers/makers6.svg';
-import makers7 from '../assets/makers/makers7.svg';
+import makers1 from "../assets/makers/makers1.svg";
+import makers2 from "../assets/makers/makers2.svg";
+import makers3 from "../assets/makers/makers3.svg";
+import makers4 from "../assets/makers/makers4.svg";
+import makers5 from "../assets/makers/makers5.svg";
+import makers6 from "../assets/makers/makers6.svg";
+import makers7 from "../assets/makers/makers7.svg";
 
 const Members_design = [
   {
     id: 1,
-    name: '곽은진',
-    grade: '커뮤니케이션미디어학부 18',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "곽은진",
+    grade: "커뮤니케이션미디어학부 18",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
   {
     id: 2,
-    name: '김다은',
-    grade: '커뮤니케이션미디어학부 18',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "김다은",
+    grade: "커뮤니케이션미디어학부 18",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
   {
     id: 3,
-    name: '박성연',
-    grade: '커뮤니케이션미디어학부 18',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "박성연",
+    grade: "커뮤니케이션미디어학부 18",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
   {
     id: 4,
-    name: '신다윤',
-    grade: '커뮤니케이션미디어학부 18',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "신다윤",
+    grade: "커뮤니케이션미디어학부 18",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
 ];
 
 const Members_front = [
   {
     id: 1,
-    name: '정다윤',
-    grade: '컴퓨터공학전공 20',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "정다윤",
+    grade: "컴퓨터공학전공 20",
+    describtion: "프론트엔드 개발 팀 리드, 메인 페이지 제작",
   },
   {
     id: 2,
-    name: '이서진',
-    grade: '컴퓨터공학전공 21',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "이서진",
+    grade: "컴퓨터공학전공 21",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
   {
     id: 3,
-    name: '정연주',
-    grade: '사이버보안전공 20',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "정연주",
+    grade: "사이버보안전공 20",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
   {
     id: 4,
-    name: '허윤',
-    grade: '커뮤니케이션미디어학부 21',
-    describtion: '기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작',
+    name: "허윤",
+    grade: "커뮤니케이션미디어학부 21",
+    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
   },
 ];
 const Makers = () => {
@@ -73,42 +73,42 @@ const Makers = () => {
     <>
       <TopBar>만든이들</TopBar>
       <Container>
-        <div className='circle1'></div>
-        <div className='circle2'></div>
-        <div className='circle3'></div>
-        <div className='circle4'></div>
-        <img src={makers1.src} className='img1' />
-        <img src={makers2.src} className='img2' />
-        <img src={makers3.src} className='img3' />
-        <img src={makers4.src} className='img4' />
-        <img src={makers5.src} className='img5' />
-        <img src={makers6.src} className='img6' />
-        <img src={makers7.src} className='img7' />
+        <div className="circle1"></div>
+        <div className="circle2"></div>
+        <div className="circle3"></div>
+        <div className="circle4"></div>
+        <img src={makers1.src} className="img1" />
+        <img src={makers2.src} className="img2" />
+        <img src={makers3.src} className="img3" />
+        <img src={makers4.src} className="img4" />
+        <img src={makers5.src} className="img5" />
+        <img src={makers6.src} className="img6" />
+        <img src={makers7.src} className="img7" />
         <Title>
           <div>LIKELION EWHA 10기</div>
           <div>졸업프로젝트 전시 사이트를 만든이들</div>
         </Title>
         <Line />
         <TeamBox>
-          <div className='title'>&lt; 기획・디자인 팀 &gt;</div>
+          <div className="title">&lt; 기획・디자인 팀 &gt;</div>
           {Members_design.map((data) => (
             <MemberBox key={data.id}>
-              <div className='name'>{data.name}</div>
-              <div className='content'>
-                <div id='grade'>{data.grade}</div>
-                <div id='describe'>{data.describtion}</div>
+              <div className="name">{data.name}</div>
+              <div className="content">
+                <div id="grade">{data.grade}</div>
+                <div id="describe">{data.describtion}</div>
               </div>
             </MemberBox>
           ))}
         </TeamBox>
         <TeamBox>
-          <div className='title'>&lt; 프론트엔드 개발 팀 &gt;</div>
+          <div className="title">&lt; 프론트엔드 개발 팀 &gt;</div>
           {Members_front.map((data) => (
             <MemberBox key={data.id}>
-              <div className='name'>{data.name}</div>
-              <div className='content'>
-                <div id='grade'>{data.grade}</div>
-                <div id='describe'>{data.describtion}</div>
+              <div className="name">{data.name}</div>
+              <div className="content">
+                <div id="grade">{data.grade}</div>
+                <div id="describe">{data.describtion}</div>
               </div>
             </MemberBox>
           ))}
@@ -256,7 +256,7 @@ const Container = styled.div`
 
 const Title = styled.div`
   margin-top: 170px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-weight: 300;
   font-size: 14px;
   display: flex;
@@ -273,7 +273,7 @@ const Line = styled.div`
 `;
 
 const TeamBox = styled.div`
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
 
   padding-left: 30px;
   padding-right: 30px;

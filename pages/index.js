@@ -21,15 +21,18 @@ export default function Home() {
     <Div>
       <Container>
         <Navbar />
-        <Image
-          src={title.src}
-          width={270}
-          height={84}
-          className="title"
-          loading="lazy"
-          blurDataURL={base64}
-          alt="title"
-        />
+        <object type="image/svg+xml" data="title.svg">
+          <Image
+            src={title.src}
+            width={270}
+            height={84}
+            className="title"
+            loading="lazy"
+            blurDataURL={base64}
+            alt="title"
+          />
+        </object>
+
         <Player />
         <Image
           src={des1.src}
@@ -67,8 +70,8 @@ export default function Home() {
           loading="lazy"
           blurDataURL={base64}
         />
-        <Letter top="224px" text="응원이 부적해 !" id="1" />
-        <Letter top="420px" text="이름하여 이름하다" id="2" />
+        <Letter top="224px" text="이름하여 이름하다" id="1" />
+        <Letter top="420px" text="응원이 부적해 !" id="2" />
       </div>
     </Div>
   );

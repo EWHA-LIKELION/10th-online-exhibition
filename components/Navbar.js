@@ -2,13 +2,20 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 //이미지
-//import navbar from "../assets/main/navbar3.png";
-import navbar from "../assets/main/navbar2.svg";
+import navbar from "../assets/main/navtest.svg";
+//import navbar from "../assets/main/navbar2.svg";
+import navbacksvg from "../assets/main/navback.svg";
+import navbackpng from "../assets/main/navback.png";
 
 const Navbar = () => {
   return (
     <NavDiv>
+      <object type="image/svg+xml" data={navbar.src}></object>
       <img src={navbar.src} />
+      <object type="image/svg+xml" data={navbacksvg.src}></object>
+      <img src={navbacksvg.src} />
+      <object type="image/svg+xml" data={navbackpng.src}></object>
+      <img src={navbackpng.src} />
 
       <div className="link">
         <Link href="/likelion">

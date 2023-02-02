@@ -21,12 +21,16 @@ export default function Home() {
     <Div>
       <Container>
         <Navbar />
-        <object type="image/svg+xml" data={title}>
-          <img
+
+        <object
+          type="image/svg+xml"
+          data={title.src}
+          style={{ marginTop: "76px" }}
+        >
+          <Image
             src={title.src}
             width={270}
             height={140}
-            className="title"
             loading="lazy"
             alt="title"
           />
@@ -40,7 +44,7 @@ export default function Home() {
           className="des2"
           loading="lazy"
           alt="description"
-        />{" "}
+        />
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>

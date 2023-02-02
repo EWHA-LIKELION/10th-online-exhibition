@@ -21,3 +21,15 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* 2022 */
+@font-face {
+  font-family: "YdestreetB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* like lion */
+@import url("https://fonts.cdnfonts.com/css/mark-pro");
+/*  font-family: 'Mark Pro', sans-serif; */

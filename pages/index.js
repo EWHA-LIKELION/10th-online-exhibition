@@ -11,6 +11,8 @@ import aurora from "../assets/main/aurora3.svg";
 import shadow from "../assets/main/shadow.svg";
 import paper from "../assets/main/paper.svg";
 import title from "../assets/main/title.svg";
+//import title from "../assets/main/titletest.png";
+
 import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 
@@ -22,10 +24,10 @@ export default function Home() {
       <Container>
         <Navbar />
         <object type="image/svg+xml" data={title}>
-          <Image
+          <img
             src={title.src}
             width={270}
-            height={84}
+            height={140}
             className="title"
             loading="lazy"
             blurDataURL={base64}
@@ -77,6 +79,11 @@ export default function Home() {
   );
 }
 
+const Test = styled.p`
+  transform: rotate(-0.08turn);
+  font-family: "Mark Pro", sans-serif;
+`;
+
 const Div = styled.div`
   padding-bottom: 130px;
   width: auto;
@@ -122,6 +129,7 @@ const Container = styled.div`
   align-items: center;
 
   .title {
+    border: 1px solid red;
     margin-top: 76px;
   }
   .des1 {

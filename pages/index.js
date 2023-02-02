@@ -73,11 +73,6 @@ export default function Home() {
   );
 }
 
-const Test = styled.p`
-  transform: rotate(-0.08turn);
-  font-family: "Mark Pro", sans-serif;
-`;
-
 const Div = styled.div`
   padding-bottom: 130px;
   width: auto;
@@ -123,7 +118,6 @@ const Container = styled.div`
   align-items: center;
 
   .title {
-    border: 1px solid red;
     margin-top: 76px;
   }
   .des1 {

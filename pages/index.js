@@ -17,8 +17,6 @@ import des1 from "../assets/main/des1.svg";
 import des2 from "../assets/main/des2.svg";
 
 export default function Home() {
-  const base64 =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO8Vw8AAkEBX6r220kAAAAASUVORK5CYII=";
   return (
     <Div>
       <Container>
@@ -30,7 +28,6 @@ export default function Home() {
             height={140}
             className="title"
             loading="lazy"
-            blurDataURL={base64}
             alt="title"
           />
         </object>
@@ -42,7 +39,6 @@ export default function Home() {
           height={22}
           className="des1"
           loading="lazy"
-          blurDataURL={base64}
           alt="description"
         />
         <Image
@@ -51,7 +47,6 @@ export default function Home() {
           height={14}
           className="des2"
           loading="lazy"
-          blurDataURL={base64}
           alt="description"
         />
       </Container>
@@ -70,7 +65,6 @@ export default function Home() {
           width={390}
           height={819}
           loading="lazy"
-          blurDataURL={base64}
         />
         <Letter top="224px" text="이름하여 이름하다" id="1" />
         <Letter top="420px" text="응원이 부적해 !" id="2" />
@@ -78,11 +72,6 @@ export default function Home() {
     </Div>
   );
 }
-
-const Test = styled.p`
-  transform: rotate(-0.08turn);
-  font-family: "Mark Pro", sans-serif;
-`;
 
 const Div = styled.div`
   padding-bottom: 130px;
@@ -129,7 +118,6 @@ const Container = styled.div`
   align-items: center;
 
   .title {
-    border: 1px solid red;
     margin-top: 76px;
   }
   .des1 {

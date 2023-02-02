@@ -31,16 +31,8 @@ export default function Home() {
             alt="title"
           />
         </object>
-
         <Player />
-        <Image
-          src={des1.src}
-          width={230}
-          height={22}
-          className="des1"
-          loading="lazy"
-          alt="description"
-        />
+        <Des1>Website Exhibition</Des1>
         <Image
           src={des2.src}
           width={215}
@@ -48,7 +40,7 @@ export default function Home() {
           className="des2"
           loading="lazy"
           alt="description"
-        />
+        />{" "}
       </Container>
 
       <div style={{ position: "relative", zIndex: "-1000" }}>
@@ -72,6 +64,15 @@ export default function Home() {
     </Div>
   );
 }
+
+const Des1 = styled.p`
+  margin-top: 46px;
+  font-family: "YdestreetB";
+  font-size: 16px;
+  color: #747474;
+  letter-spacing: 0.125em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+`;
 
 const Div = styled.div`
   padding-bottom: 130px;

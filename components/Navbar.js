@@ -2,20 +2,15 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 //이미지
-//import navbar from "../assets/main/navtest.svg";
-import navbar from "../assets/main/navbar2.svg";
-import navbacksvg from "../assets/main/navback.svg";
-import navbackpng from "../assets/main/navback.png";
+//import navbar from "../assets/main/navbar2.svg";
+import navbar from "../assets/main/navbar.svg";
 
 const Navbar = () => {
   return (
     <NavDiv>
-      {/* <object type="image/svg+xml" data={navbar.src}></object> */}
-      <img src={navbar.src} />
-      {/* <object type="image/svg+xml" data={navbacksvg.src}></object>
-      <img src={navbacksvg.src} />
-      <object type="image/svg+xml" data={navbackpng.src}></object>
-      <img src={navbackpng.src} /> */}
+      <object type="image/svg+xml" data={navbar.src}>
+        <img src={navbar.src} />
+      </object>
 
       <div className="link">
         <Link href="/likelion">
@@ -47,43 +42,37 @@ const NavDiv = styled.div`
 
   .link {
     width: 95%;
-
     position: absolute;
     top: 0;
     left: 0;
-
-    //border: 1px solid blue;
-
     display: flex;
     justify-content: space-around;
   }
 
   .second {
-    //border: 1px solid red;
-
     left: 15px;
     width: 140px;
     height: 30px;
   }
 
   .third {
-    //border: 1px solid red;
     left: 155px;
     width: 71px;
     height: 30px;
   }
 
   .fourth {
-    //border: 1px solid red;
     left: 260px;
     width: 45px;
     height: 30px;
   }
 
-  img {
-    //transform: translateX(calc((100% - 390px) / 2 * (-1)));
+  object {
     width: 95%;
-
+  }
+  img {
+    width: 95%;
+    //transform: translateX(calc((100% - 390px) / 2 * (-1)));
     /* @media screen and (min-width: 390px) {
       transform: translateX(calc((100% - 390px) / 2 * (-1)));
     } */

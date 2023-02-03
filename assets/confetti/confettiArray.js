@@ -171,8 +171,8 @@ export const ConfettiArray = [
   {
     id: 2,
     src: img3,
-    bottom: "-50px",
-    left: "-130px",
+    bottom: "-120px",
+    left: "-100px",
     ani: "fall3 6s ease 3s infinite",
   },
   {
@@ -199,8 +199,8 @@ export const ConfettiArray = [
   {
     id: 6,
     src: img7,
-    bottom: "-40px",
-    left: "-120px",
+    bottom: "-100px",
+    left: "20px",
     ani: "fall3 9s ease-in 5s infinite",
   },
   {

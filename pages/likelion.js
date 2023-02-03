@@ -1,26 +1,44 @@
 // 멋사 10기 소개 페이지
-import react from 'react';
-import styled from 'styled-components';
+import react from "react";
+import styled from "styled-components";
 
 // component
-import TopBar from '../components/TopBar';
-import Footer from '../components/Footer';
+import TopBar from "../components/TopBar";
+import Footer from "../components/Footer";
 
 // 이미지
-import aurora from '../assets/main/aurora3.svg';
-import subtract from '../assets/likelion/subtract2.svg';
-import whitearrow from '../assets/likelion/whitearrow.svg';
+import aurora from "../assets/main/aurora3.svg";
+import subtract from "../assets/likelion/subtract2.svg";
+import whitearrow from "../assets/likelion/whitearrow.svg";
+
+import activity1 from "../assets/likelion/activity1.png";
+import activity2 from "../assets/likelion/activity2.png";
+import activity3 from "../assets/likelion/activity3.png";
+import activity4 from "../assets/likelion/activity4.png";
+import activity5 from "../assets/likelion/activity5.png";
+import activity6 from "../assets/likelion/activity6.png";
+import activity7 from "../assets/likelion/activity7.png";
+import activity8 from "../assets/likelion/activity8.png";
 
 const Likelion = () => {
+  const urls = [
+    "",
+    "https://www.instagram.com/p/CghRjDSvQ1e/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/Cg1c7oGvDcT/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/CgziA44vZoN/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/Cf3Wt_aPl-p/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/CioVMIFPo2y/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/CioVQUvvsyN/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/CiZDPFYvQg4/?utm_source=ig_web_copy_link",
+    "https://www.instagram.com/p/Cms9qoivTUx/?utm_source=ig_web_copy_link", //졸프 > 전시사이트 카뉴 링크로 수정
+  ];
   // 인스타그램 링크 이동
   const onClicktoInsta = (id) => {
-    const url = 'https://instagram.com/likelion_ewha?igshid=YmMyMTA2M2Y=';
-    window.open(url);
+    window.open(urls[id]);
   };
-
   // 아기사자 리크루팅 노션 이동
   const onClicktoNotion = () => {
-    const url = 'https://www.notion.com';
+    const url = "https://www.notion.com";
     window.open(url);
   };
   return (
@@ -36,143 +54,221 @@ const Likelion = () => {
         <Background>
           <TextWrapper>
             <MiniTitle>
-              <div className='title'>활동기간</div>
-              <DottedLine width='70vw'></DottedLine>
+              <div className="title">활동기간</div>
+              <DottedLine width="70vw"></DottedLine>
             </MiniTitle>
-            <div className='text'>2022.03 - 2023. 02</div>
+            <div className="text">2022.03 - 2023. 01</div>
           </TextWrapper>
 
           <TextWrapper>
             <MiniTitle>
-              <div className='title'>멋사 공식 인스타그램</div>
-              <DottedLine width='55vw'></DottedLine>
+              <div className="title">멋사 공식 인스타그램</div>
+              <DottedLine width="55vw"></DottedLine>
             </MiniTitle>
-            <div className='text'>@likelion_ewha</div>
+            <div className="text">@likelion_ewha</div>
           </TextWrapper>
           <TextWrapper>
             <MiniTitle>
-              <div className='title'>멋쟁이사자처럼 소개</div>
-              <DottedLine width='57vw'></DottedLine>
+              <div className="title">멋쟁이사자처럼 소개</div>
+              <DottedLine width="57vw"></DottedLine>
             </MiniTitle>
-            <div className='text'>
+            <div className="text">
               피가 봄바람을 못하다 노래하며 뭇 석가는 구할 힘있다. 품고 무엇이
               소금이라 공자는 피부가 부패뿐이다. 갑 그들은 남는 현저하게 별과
               것이다. 갑 있는 미묘한 심장은 청춘의 그들은 주며, 희망의 쓸쓸하랴?
               가슴이 피어나는 구하지 타오르고 곧 피부가 인생을 피고, 부패뿐이다.
               그들의 찬미를 광야에서 그들은 없으면, 하는 청춘에서만 두기
-              노년에게서 칼이다.{' '}
+              노년에게서 칼이다.{" "}
             </div>
           </TextWrapper>
           <TextWrapper>
             <MiniTitle>
-              <div className='title'>멋사 커리큘럼</div>
-              <DottedLine width='65vw'></DottedLine>
+              <div className="title">멋사 커리큘럼</div>
+              <DottedLine width="65vw"></DottedLine>
             </MiniTitle>
-            <div className='boldtext'>트랙공통</div>
-            <TrackBox start='left'>
-              <img className='subtract' src={subtract.src}></img>
+            <div className="boldtext">트랙 공통</div>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src}></img>
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">HTML&CSS</div>
+                  <div className="content">기초 코딩 교육</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">Python</div>
+                  <div className="content">기초 코딩 교육</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <TrackBox start='right'>
-              <img className='subtract' src={subtract.src} />
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src} />
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">Git 입문</div>
+                  <div className="content">Github와 버전 관리</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">아이디어톤</div>
+                  <div className="content">중앙해커톤 서비스 기획</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <div className='boldtext'>기획·디자인</div>
-            <TrackBox start='left'>
-              <img className='subtract' src={subtract.src}></img>
+            <div className="boldtext">기획·디자인</div>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src}></img>
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">역기획서 #1</div>
+                  <div className="content">어쩌구저쩌구 내용</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">역기획서 #2</div>
+                  <div className="content">어쩌구저쩌구 내용</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <TrackBox start='right'>
-              <img className='subtract' src={subtract.src} />
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src}></img>
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">PM과 문제정의</div>
+                  <div className="content">어쩌구저쩌구 내용</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">기획자와 UX</div>
+                  <div className="content">어쩌구저쩌구 내용</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <div className='boldtext'>프론트엔드</div>
-            <TrackBox start='left'>
-              <img className='subtract' src={subtract.src}></img>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src} />
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">대동제 사이트 기획</div>
+                  <div className="content">TF와의 협동 기획</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">대동제 사이트 디자인</div>
+                  <div className="content">대동제 사이트 UI 디자인</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <TrackBox start='right'>
-              <img className='subtract' src={subtract.src} />
+            <div className="boldtext">프론트엔드</div>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src}></img>
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">Javascript</div>
+                  <div className="content">Javascript 필수 문법</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">JS 토이프로젝트</div>
+                  <div className="content">JS로 Todolist 만들기</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <div className='boldtext'>백엔드</div>
-            <TrackBox start='left'>
-              <img className='subtract' src={subtract.src}></img>
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src} />
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">React 기초 1</div>
+                  <div className="content">React 입문</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">React 기초 2</div>
+                  <div className="content">React Hooks</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
-            <TrackBox start='right'>
-              <img className='subtract' src={subtract.src} />
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src} />
               <TrackBox2>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">React 기초 3</div>
+                  <div className="content">Router, CSS in JS</div>
                 </TextBox>
                 <TextBox>
-                  <div className='title'>HTML&CSS</div>
-                  <div className='content'>어쩌구저쩌구 내용</div>
+                  <div className="title">React 심화 1</div>
+                  <div className="content">상태 관리 라이브러리</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">React 심화 2</div>
+                  <div className="content">Http 프로토콜, axios</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">대동제 프로젝트</div>
+                  <div className="content">Re:wha 사이트 개발</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <div className="boldtext">백엔드</div>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src}></img>
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">Django 기초</div>
+                  <div className="content">django MTV 패턴</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">Django 블로그</div>
+                  <div className="content">django CRUD</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">1:N & M:N</div>
+                  <div className="content">댓글과 해시태그</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">Static & Media</div>
+                  <div className="content">django 정적 파일 관리</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">유저인증과 확장</div>
+                  <div className="content">로그인 & 회원가입</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">DRF #1</div>
+                  <div className="content">Serialization</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start="right">
+              <img className="subtract" src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">DRF #2</div>
+                  <div className="content">블로그 API 서버</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">DRF #3</div>
+                  <div className="content">User Serializer</div>
+                </TextBox>
+              </TrackBox2>
+            </TrackBox>
+            <TrackBox start="left">
+              <img className="subtract" src={subtract.src} />
+              <TrackBox2>
+                <TextBox>
+                  <div className="title">Deploy</div>
+                  <div className="content">DRF 배포</div>
+                </TextBox>
+                <TextBox>
+                  <div className="title">대동제 프로젝트</div>
+                  <div className="content">API 서버와 DB 구축</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
@@ -180,31 +276,72 @@ const Likelion = () => {
           </TextWrapper>
           <TextWrapper>
             <MiniTitle>
-              <div className='title'>10기 활동내역</div>
-              <DottedLine width='65vw'></DottedLine>
+              <div className="title">10기 활동내역</div>
+              <DottedLine width="65vw"></DottedLine>
             </MiniTitle>
             <InstaWrapper>
-              <div className='flex_row'>
-                <InstaImage onClick={onClicktoInsta}></InstaImage>
-                <InstaImage onClick={onClicktoInsta}></InstaImage>
+              <div className="flex_row">
+                <InstaImage
+                  onClick={() => onClicktoInsta(1)}
+                  back={activity1.src}
+                >
+                  1학기 교육 활용 <p>2022.03 - 2022.07</p>
+                </InstaImage>
+                <InstaImage
+                  onClick={() => onClicktoInsta(2)}
+                  back={activity2.src}
+                >
+                  DRF 연합세션 <p>2022.07.26</p>
+                </InstaImage>
               </div>
-              <div className='flex_row'>
-                <InstaImage></InstaImage>
-                <InstaImage></InstaImage>
+              <div className="flex_row">
+                <InstaImage
+                  back={activity3.src}
+                  onClick={() => onClicktoInsta(3)}
+                >
+                  여기톤 <p>2022.07.29</p>
+                </InstaImage>
+                <InstaImage
+                  back={activity4.src}
+                  onClick={() => onClicktoInsta(4)}
+                >
+                  중앙 아이디어톤 본선 <p>2022.07.22</p>
+                </InstaImage>
               </div>
-              <div className='flex_row'>
-                <InstaImage></InstaImage>
-                <InstaImage></InstaImage>
+              <div className="flex_row">
+                <InstaImage
+                  back={activity5.src}
+                  onClick={() => onClicktoInsta(5)}
+                >
+                  중앙해커톤 금상 <p>2022.08.19</p>
+                  <p>2022.06.01</p>
+                </InstaImage>
+                <InstaImage
+                  back={activity6.src}
+                  onClick={() => onClicktoInsta(6)}
+                >
+                  신촌 연합 해커톤 <p>2022.08.27</p>
+                </InstaImage>
               </div>
-              <div className='flex_row'>
-                <InstaImage></InstaImage>
-                <InstaImage></InstaImage>
+              <div className="flex_row">
+                <InstaImage
+                  back={activity7.src}
+                  onClick={() => onClicktoInsta(7)}
+                >
+                  2022 대동제 <p>2022.09.14 - 09.16</p>
+                </InstaImage>
+                <InstaImage
+                  back={activity8.src}
+                  onClick={() => onClicktoInsta(8)}
+                >
+                  졸업 프로젝트 <p>2022.12-2023.01</p>
+                </InstaImage>
               </div>
             </InstaWrapper>
           </TextWrapper>
           <Recruiting onClick={onClicktoNotion}>
-            <div className='text'>멋쟁이 사자처럼 11기 아기사자 모집</div>
-            <div className='button'>
+            <div className="text">멋쟁이 사자처럼 11기 아기사자 모집</div>
+            <div className="button">
               <img src={whitearrow.src} />
             </div>
           </Recruiting>
@@ -230,7 +367,7 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   height: 90px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
 `;
 
 const TilteBar = styled.div`
@@ -240,7 +377,7 @@ const TilteBar = styled.div`
   align-items: flex-start;
   justify-content: flex-end;
 
-  font-family: 'Ydestreet';
+  font-family: "Ydestreet";
   font-size: 16px;
 
   padding-left: 20px;
@@ -251,7 +388,7 @@ const Background = styled.div`
   position: relative;
 
   ::after {
-    content: '';
+    content: "";
     background-image: url(${aurora.src});
     background-size: cover;
     background-position-x: 50%;
@@ -274,7 +411,7 @@ const TextWrapper = styled.div`
   padding: 4px 20px 4px 20px;
   margin-top: 24px;
   .text {
-    font-family: 'Pretendard-Regular';
+    font-family: "Pretendard-Regular";
     font-size: 13px;
     font-weight: 400;
     line-height: 17px;
@@ -282,7 +419,7 @@ const TextWrapper = styled.div`
   }
 
   .boldtext {
-    font-family: 'Pretendard-Regular';
+    font-family: "Pretendard-Regular";
     font-size: 14px;
     font-weight: 600;
     padding: 16px 0 16px 0;
@@ -294,7 +431,7 @@ const MiniTitle = styled.div`
   display: flex;
   align-items: center;
   /* border: solid 1px; */
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 4px;
@@ -319,7 +456,7 @@ const TrackBox = styled.div`
   position: static;
   align-items: center;
   justify-content: ${(props) =>
-    props.start === 'left' ? 'flex-start' : 'flex-end'};
+    props.start === "left" ? "flex-start" : "flex-end"};
   height: 60px;
   margin: 4px 0 4px 0;
 
@@ -331,16 +468,19 @@ const TrackBox = styled.div`
 `;
 
 const TrackBox2 = styled.div`
+  /* border: solid 1px; */
+
   display: flex;
   width: 305px;
   justify-content: space-around;
+  transform: translate(-3px, 3px);
 `;
 
 const TextBox = styled.div`
   display: flex;
   flex-direction: column;
 
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   align-items: center;
   justify-content: center;
   .title {
@@ -359,7 +499,7 @@ const TextBox = styled.div`
 const WarningText = styled.div`
   font-size: 13px;
   font-weight: 400;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: #9d9d9d;
 
   padding: 8px 0 32px 0;
@@ -380,12 +520,35 @@ const InstaWrapper = styled.div`
   }
 `;
 const InstaImage = styled.div`
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+    transition: all ease 1s 0s;
+  }
+  position: relative;
+
+  background-image: url(${(props) => props.back});
   width: 119px;
   height: 119px;
   margin: 5px 10px 5px 10px;
-  background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-family: "Pretendard Variable";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Pretendard-Regular";
+  p {
+    font-size: 10px;
+    position: absolute;
+    bottom: 10px;
+  }
 `;
 
 const Recruiting = styled.div`
@@ -403,7 +566,7 @@ const Recruiting = styled.div`
   margin-bottom: 60px;
 
   .text {
-    font-family: 'Pretendard-Regular';
+    font-family: "Pretendard-Regular";
     font-weight: 400;
     font-size: 13px;
   }

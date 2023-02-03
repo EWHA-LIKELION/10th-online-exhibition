@@ -57,6 +57,7 @@ const Div = styled.div`
     position: absolute;
     left: -85px;
     top: -145px;
+    filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.2));
   }
   .player {
     position: absolute;

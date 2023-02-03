@@ -33,3 +33,11 @@
 /* like lion */
 @import url("https://fonts.cdnfonts.com/css/mark-pro");
 /*  font-family: 'Mark Pro', sans-serif; */
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

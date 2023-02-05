@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import ticketimg from "../assets/lions/ticket.svg";
 import faceimg from "../assets/lions/testface.png";
@@ -9,27 +9,27 @@ import back from "../assets/topbar/back.svg";
 
 const Ticket = (arr) => {
 	const [open, setOpen] = useState([false, 0]);
-	console.log(arr);
 	const member = arr.arr;
+	useEffect(() => setOpen([false, 0]), [arr]);
 	return (
 		<>
 			{member &&
 				member.map((mem) => {
 					return (
-						<>
-							<Container key={mem.id}>
-								<TicketDiv>
-									<Image
-										src={ticketimg.src}
-										width={360}
-										height={110}
-										alt="ticket"
-										className="ticket"
-									/>
+						<Container key={mem.id}>
+							<TicketDiv>
+								<Image
+									src={ticketimg.src}
+									width={360}
+									height={110}
+									alt="ticket"
+									className="ticket"
+								/>
+								<Inner>
 									<div className="left">
 										<div className="face-rect">
 											<Image
-												src={faceimg.src}
+												src={mem.img}
 												width={100}
 												height={100}
 												className="face"
@@ -65,14 +65,14 @@ const Ticket = (arr) => {
 											/>
 										</div>
 									</div>
-								</TicketDiv>
-								<TextDiv
-									className={open.includes(mem.id) && open ? "open" : "close"}
-								>
-									<div className="text-text">{mem.text}</div>
-								</TextDiv>
-							</Container>
-						</>
+								</Inner>
+							</TicketDiv>
+							<TextDiv
+								className={open.includes(mem.id) && open ? "open" : "close"}
+							>
+								<div className="text-text">{mem.text}</div>
+							</TextDiv>
+						</Container>
 					);
 				})}
 		</>
@@ -98,7 +98,7 @@ const Container = styled.div`
 				margin-top: -150px;
 				opacity: 0;
 			}
-			45% {
+			35% {
 				opacity: 0;
 			}
 			100% {
@@ -107,8 +107,15 @@ const Container = styled.div`
 			}
 		}
 		animation-name: out;
-		animation-duration: 0.7s;
+		animation-duration: 0.8s;
 	}
+`;
+
+const Inner = styled.div`
+	width: 95%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const TicketDiv = styled.div`
@@ -119,6 +126,7 @@ const TicketDiv = styled.div`
 	align-items: center;
 	margin-top: 20px;
 	position: relative;
+	z-index: 100;
 	.ticket {
 		position: absolute;
 		width: 100%;
@@ -128,20 +136,27 @@ const TicketDiv = styled.div`
 		position: relative;
 	}
 	.left {
-		width: 90%;
+		width: 82%;
 		height: 100%;
 		display: flex;
 		align-items: center;
+		@media screen and (min-width: 406px) {
+			width: 78%;
+		}
+		@media screen and (min-width: 423px) {
+			width: 75%;
+		}
+		@media screen and (min-width: 440px) {
+			width: 81%;
+		}
 	}
 	.right {
-		width: 40px;
+		width: 15%;
 		height: 30px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		position: absolute;
-		right: 10px;
 	}
 	.face-rect {
 		width: auto;
@@ -229,5 +244,14 @@ const TextDiv = styled.div`
 		width: 90%;
 		word-break: break-all;
 		margin: 10px 0 12px 15px;
+	}
+	@media screen and (min-width: 406px) {
+		width: 75%;
+	}
+	@media screen and (min-width: 423px) {
+		width: 72%;
+	}
+	@media screen and (min-width: 440px) {
+		width: 76%;
 	}
 `;

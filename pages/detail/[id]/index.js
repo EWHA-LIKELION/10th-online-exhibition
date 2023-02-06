@@ -18,13 +18,18 @@ import pdtech2 from "../../../assets/detail/pdtech2.svg";
 import btnicon from "../../../assets/detail/btnicon.svg";
 
 const Detail = (props) => {
+  // const Routeid = router.query.id;
+  //const router = useRouter();
+
   const { id } = props;
-  const router = useRouter();
-  const Routeid = router.query.id;
+  const Task = RnRdata[id - 1].task;
+  const Tech = Techdata[id - 1].tech;
+  console.log(Tech);
+
   //const [id, setId] = useState(id);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Container>
         <TopBar>
           <Link href="/">
@@ -39,7 +44,13 @@ const Detail = (props) => {
           />
         </TopBar>
         <Slider />
-        <div style={{ display: "flex", "flex-direction": "column" }}>
+        <div
+          style={{
+            display: "flex",
+            "flex-direction": "column",
+            // marginBottom: "30px",
+          }}
+        >
           <Image
             src={introduceimg.src}
             width={358}
@@ -58,26 +69,53 @@ const Detail = (props) => {
             alt="rnrimg"
             className="index"
           />
+
           <RnR>
-            <span className="part-name">{RnRdata[id - 1].data[0].name}</span>
-            <div style={{ marginLeft: "25px" }}>
-              <p className="mem-name">
-                {RnRdata[id - 1].data[0].member[0].name}
-              </p>
-              <p className="task">{RnRdata[id - 1].data[0].member[0].task}</p>
-            </div>
+            <span className="part-name">기획 디자인</span>
+            <TaskBox>
+              {Task.map((d) => {
+                if (d.part == 1) {
+                  return (
+                    <div style={{ marginLeft: "25px" }}>
+                      <p className="mem-name">{d.name}</p>
+                      <p className="task">{d.task}</p>
+                    </div>
+                  );
+                }
+              })}
+            </TaskBox>
           </RnR>
           <RnR>
-            <span className="part-name" style={{ color: "transparent" }}>
-              {RnRdata[id - 1].data[0].name}
-            </span>
-            <div style={{ marginLeft: "25px" }}>
-              <p className="mem-name">
-                {RnRdata[id - 1].data[0].member[1].name}
-              </p>
-              <p className="task">{RnRdata[id - 1].data[0].member[1].task}</p>
-            </div>
+            <span className="part-name">프론트엔드</span>
+            <TaskBox>
+              {Task.map((d) => {
+                if (d.part == 2) {
+                  return (
+                    <div style={{ marginLeft: "25px" }}>
+                      <p className="mem-name">{d.name}</p>
+                      <p className="task">{d.task}</p>
+                    </div>
+                  );
+                }
+              })}
+            </TaskBox>
           </RnR>
+          <RnR>
+            <span className="part-name">백엔드</span>
+            <TaskBox>
+              {Task.map((d) => {
+                if (d.part == 3) {
+                  return (
+                    <div style={{ marginLeft: "25px" }}>
+                      <p className="mem-name">{d.name}</p>
+                      <p className="task">{d.task}</p>
+                    </div>
+                  );
+                }
+              })}
+            </TaskBox>
+          </RnR>
+
           <Image
             src={techstackimg.src}
             width={358}
@@ -85,24 +123,57 @@ const Detail = (props) => {
             alt="techstackimg"
             className="index"
           />
-          <Tech>
-            <p className="part-name">{Techdata[id - 1].data[0].name}</p>
-            <Image
-              src={Techdata[id - 1].data[0].tech[0].src}
-              width={50}
-              height={50}
-              className="techicon"
-              alt="techicon"
-            />
-            <Image
-              src={Techdata[id - 1].data[0].tech[1].src}
-              width={50}
-              height={50}
-              className="techicon"
-              alt="techicon"
-            />
-          </Tech>
+          <TechBox>
+            <p className="part-name">기획 디자인</p>
+
+            {Tech.map((tech) => {
+              if (tech.part == 1) {
+                return (
+                  <Image
+                    src={tech.src.src}
+                    width={50}
+                    height={50}
+                    className="techicon"
+                    alt="techicon"
+                  />
+                );
+              }
+            })}
+          </TechBox>
+          <TechBox>
+            <p className="part-name">프론트엔드</p>
+            {Tech.map((tech) => {
+              if (tech.part == 2) {
+                return (
+                  <Image
+                    src={tech.src.src}
+                    width={50}
+                    height={50}
+                    className="techicon"
+                    alt="techicon"
+                  />
+                );
+              }
+            })}
+          </TechBox>
+          <TechBox>
+            <p className="part-name">백엔드</p>
+            {Tech.map((tech) => {
+              if (tech.part == 3) {
+                return (
+                  <Image
+                    src={tech.src.src}
+                    width={50}
+                    height={50}
+                    className="techicon"
+                    alt="techicon"
+                  />
+                );
+              }
+            })}
+          </TechBox>
         </div>
+
         <div
           style={{ width: "10%", display: "flex", justifyContent: "center" }}
         >
@@ -122,8 +193,8 @@ const Detail = (props) => {
 
         <img src={backimg.src} className="background" />
       </Container>
-      {/* <Footer isAbsolute={false}/> */}
-    </>
+      <Footer isAbsolute={false} />
+    </div>
   );
 };
 
@@ -147,6 +218,19 @@ export const getStaticPaths = async () => {
 };
 
 const Container = styled.div`
+  border: 1px red solid;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: auto;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   a {
     width: fit-content;
   }
@@ -162,6 +246,7 @@ const Container = styled.div`
 
   .background {
     width: 100%;
+    height: auto;
     position: absolute;
     z-index: -1000;
   }
@@ -173,7 +258,7 @@ const Container = styled.div`
   }
 
   .part-name {
-    width: 70px;
+    width: 100px;
     white-space: nowrap;
 
     font-family: "Pretendard Variable";
@@ -267,9 +352,14 @@ const RnR = styled.div`
   position: relative;
 `;
 
-const Tech = styled.div`
+const TaskBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const TechBox = styled.div`
   width: 90%;
-  margin: 0 auto;
+  margin: 5px auto 10px auto;
 
   .techicon {
     margin-top: 11px;
@@ -278,11 +368,12 @@ const Tech = styled.div`
 `;
 
 const VisitBtn = styled.div`
+  z-index: 1000000;
   position: fixed;
   width: 328px;
   height: 50px;
   bottom: 25px;
-  /* left: 0; */
+  left: calc((100% - 328px) / 2);
 
   background: #75a483;
   border: 0;
@@ -334,102 +425,87 @@ const RnRdata = [
   {
     id: 1,
     name: "응원이 부적해",
-    data: [
+    task: [
       {
-        name: "기획 디자인",
-        member: [
-          {
-            name: "박성연",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "김다은",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 1,
+        name: "박성연",
+        task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은`,
       },
       {
-        name: "프론트엔드",
-        member: [
-          {
-            name: "정연주",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "이서진",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 1,
+        name: "김다은",
+        task: `맡은 일, 맡은 일 맡은 일, 맡은 일, 맡은 일`,
       },
       {
-        name: "백엔드",
-        member: [
-          {
-            name: "조현영",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "최유미",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "이나경",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 2,
+        name: "정연주",
+        task: `맡은 일, 맡은 일 일, 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 2,
+        name: "이서진",
+        task: `맡은 일, 맡은 일, 맡 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "조현영",
+        task: `맡은 일, 맡은 일, 일, 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "최유미",
+        task: `맡은 일맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "이나경",
+        task: `맡은 일, 맡은 , 맡은 일, 맡은 일, 맡은 일`,
       },
     ],
   },
   {
     id: 2,
     name: "이름하여 이름하다",
-    data: [
+    task: [
       {
-        name: "기획 디자인",
-        member: [
-          {
-            name: "곽은진",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "신다윤",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 1,
+        name: "곽은진",
+        task: `맡은 일, 맡맡은 일`,
       },
       {
-        name: "프론트엔드",
-        member: [
-          {
-            name: "김민주",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "이채원",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "허윤",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 1,
+        name: "신다윤",
+        task: `맡은 일, 맡, 맡은 일, 맡은 일, 맡은 일`,
       },
       {
-        name: "백엔드",
-        member: [
-          {
-            name: "신이수",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "임채영",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-          {
-            name: "김정은",
-            task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은 일, 맡은 일, 맡은 일, 맡은 일`,
-          },
-        ],
+        part: 2,
+        name: "김민주",
+        task: `맡은 일, 맡은 일맡은 일`,
+      },
+      {
+        part: 2,
+        name: "이채원",
+        task: `맡은 일, 맡은 일 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 2,
+        name: "허윤",
+        task: `맡은 일, 맡일, 맡 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "신이수",
+        task: `맡은 일, 맡은 일맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "임채영",
+        task: `맡은 일, 맡은일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "김정은",
+        task: `맡은, 맡은 일맡은 일, 맡은 일`,
       },
     ],
   },
@@ -438,56 +514,26 @@ const RnRdata = [
 const Techdata = [
   {
     id: 1,
-    name: "응원이 부적해",
-    data: [
-      {
-        name: "기획 디자인",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
-      {
-        name: "프론트엔드",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
-      {
-        name: "백엔드",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
+    name: "이름하여 이름하다",
+    tech: [
+      { src: pdtech1, alt: "figma", part: 1 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 1 },
+      { src: pdtech1, alt: "figma", part: 2 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 2 },
+      { src: pdtech1, alt: "figma", part: 3 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 3 },
     ],
   },
   {
     id: 2,
-    name: "이름하여 이름하다",
-    data: [
-      {
-        name: "기획 디자인",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
-      {
-        name: "프론트엔드",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
-      {
-        name: "백엔드",
-        tech: [
-          { src: pdtech1, alt: "figma" },
-          { src: pdtech2, alt: "Adobe Illustrator" },
-        ],
-      },
+    name: "응원이 부적해",
+    tech: [
+      { src: pdtech1, alt: "figma", part: 1 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 1 },
+      { src: pdtech1, alt: "figma", part: 2 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 2 },
+      { src: pdtech1, alt: "figma", part: 3 },
+      { src: pdtech2, alt: "Adobe Illustrator", part: 3 },
     ],
   },
 ];

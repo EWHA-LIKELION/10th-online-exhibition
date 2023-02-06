@@ -82,11 +82,12 @@ const Likelion = () => {
               <DottedLine width="57vw"></DottedLine>
             </MiniTitle>
             <div className="text">
-              멋쟁이사자처럼은 대학생을 대상으로 개발 교육과 프로젝트 경험을
-              제공하는 전국 단위 웹 개발 동아리입니다. 2022년을 기준으로 42개
-              대학이 소속되어 있습니다. 이화여대 멋쟁이사자처럼 10기는 3명의
-              운영진과 16명의 아기사자로 구성되어있으며, 기획디자인, 백엔드,
-              프론트엔드로 트랙을 나누어 활동을 진행했습니다.
+              HACK YOUR LIFE💻 멋쟁이사자처럼은 대학생을 대상으로 개발 교육과
+              프로젝트 경험을 제공하는 전국 단위 웹 개발 동아리입니다! 2022년을
+              기준으로 42개 대학이 소속되어 있습니다. 🦁이화여대 멋쟁이사자처럼
+              10기는 3명의 운영진과 16명의 아기사자로 구성되어있으며,
+              기획디자인, 백엔드, 프론트엔드로 트랙을 나누어 활동을
+              진행했습니다. 코딩의 코자도 모르는 벗들 모두 환영합니다👋🏻
             </div>
           </TextWrapper>
           <TextWrapper>
@@ -366,6 +367,10 @@ const Container = styled.div`
   @media screen and (min-width: 440px) {
     width: 390px;
     height: auto;
+
+    .title {
+      white-space: nowrap;
+    }
   }
 
   width: 100%;

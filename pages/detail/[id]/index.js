@@ -219,7 +219,7 @@ export const getStaticPaths = async () => {
 
 const Wrapper = styled.div`
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 `;
 const Container = styled.div`
   overflow: hidden;

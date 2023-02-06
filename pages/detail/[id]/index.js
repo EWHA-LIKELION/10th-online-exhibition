@@ -76,7 +76,7 @@ const Detail = (props) => {
               {Task.map((d) => {
                 if (d.part == 1) {
                   return (
-                    <div style={{ marginLeft: "25px" }}>
+                    <div style={{ marginLeft: "25px" }} key={d.name}>
                       <p className="mem-name">{d.name}</p>
                       <p className="task">{d.task}</p>
                     </div>
@@ -91,7 +91,7 @@ const Detail = (props) => {
               {Task.map((d) => {
                 if (d.part == 2) {
                   return (
-                    <div style={{ marginLeft: "25px" }}>
+                    <div style={{ marginLeft: "25px" }} key={d.name}>
                       <p className="mem-name">{d.name}</p>
                       <p className="task">{d.task}</p>
                     </div>
@@ -106,7 +106,7 @@ const Detail = (props) => {
               {Task.map((d) => {
                 if (d.part == 3) {
                   return (
-                    <div style={{ marginLeft: "25px" }}>
+                    <div style={{ marginLeft: "25px" }} key={d.name}>
                       <p className="mem-name">{d.name}</p>
                       <p className="task">{d.task}</p>
                     </div>
@@ -130,6 +130,7 @@ const Detail = (props) => {
               if (tech.part == 1) {
                 return (
                   <Image
+                    key={tech.alt}
                     src={tech.src.src}
                     width={50}
                     height={50}
@@ -146,6 +147,7 @@ const Detail = (props) => {
               if (tech.part == 2) {
                 return (
                   <Image
+                    key={tech.alt}
                     src={tech.src.src}
                     width={50}
                     height={50}
@@ -162,6 +164,7 @@ const Detail = (props) => {
               if (tech.part == 3) {
                 return (
                   <Image
+                    key={tech.alt}
                     src={tech.src.src}
                     width={50}
                     height={50}

@@ -71,8 +71,9 @@ const Members_front = [
 const Makers = () => {
   return (
     <>
-      <TopBar>만든이들</TopBar>
       <Container>
+        <TopBar>만든이들</TopBar>
+
         <div className="circle1"></div>
         <div className="circle2"></div>
         <div className="circle3"></div>
@@ -122,13 +123,18 @@ const Makers = () => {
 export default Makers;
 
 const Container = styled.div`
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: auto;
+  }
+
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
   position: absolute;
-  z-index: -2;
+  z-index: 100;
   overflow: hidden;
 
   .circle1 {

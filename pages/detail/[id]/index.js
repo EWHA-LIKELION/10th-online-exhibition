@@ -9,7 +9,9 @@ import Footer from "../../../components/Footer";
 //image
 import backimg from "../../../assets/detail/backimg.svg";
 import back from "../../../assets/topbar/back.svg";
-import namingtitle from "../../../assets/detail/namingtitle.svg";
+import namingtitle1 from "../../../assets/detail/namingtitle1.svg";
+import namingtitle2 from "../../../assets/detail/namingtitle2.svg";
+
 import introduceimg from "../../../assets/detail/introduceimg.svg";
 import rnrimg from "../../../assets/detail/rnrimg.svg";
 import techstackimg from "../../../assets/detail/techstackimg.svg";
@@ -18,18 +20,13 @@ import pdtech2 from "../../../assets/detail/pdtech2.svg";
 import btnicon from "../../../assets/detail/btnicon.svg";
 
 const Detail = (props) => {
-  // const Routeid = router.query.id;
-  //const router = useRouter();
-
   const { id } = props;
   const Task = RnRdata[id - 1].task;
   const Tech = Techdata[id - 1].tech;
   console.log(Tech);
 
-  //const [id, setId] = useState(id);
-
   return (
-    <div style={{ position: "relative" }}>
+    <Wrapper>
       <Container>
         <TopBar>
           <Link href="/">
@@ -197,7 +194,7 @@ const Detail = (props) => {
         <img src={backimg.src} className="background" />
       </Container>
       <Footer isAbsolute={false} />
-    </div>
+    </Wrapper>
   );
 };
 
@@ -220,8 +217,11 @@ export const getStaticPaths = async () => {
   };
 };
 
+const Wrapper = styled.div`
+  position: relative;
+  padding-bottom: 50px;
+`;
 const Container = styled.div`
-  border: 1px red solid;
   overflow: hidden;
   position: relative;
 
@@ -406,18 +406,18 @@ const VisitBtn = styled.div`
 const Introducedata = [
   {
     id: 1,
-    name: "응원이 부적해",
+    name: "이름하여 이름하다",
     url: "https://www.instagram.com/likelion_ewha/",
-    titleimg: namingtitle,
+    titleimg: namingtitle1,
     oneline: "나만의 사전을 친구들과 함께 채워가요",
     detail: `목숨이 위하여, 눈에 봄바람이다. 인간의 대고, 불어 이상의 목숨이 이 있는가? 속잎나고, 기관과 설산에서 봄바람이다. 청춘의 것이 속에서 눈에 군영과 보이는 있으랴? 뭇 끓는 지혜는 사는가 싹이 풍부하게 않는 그들에게 하여도 것이다. 
     설레는 너의 내는 트고, 새 긴지라 아름다우냐? 우리 대중을 위하여서, 그들의 가진 같으며, 피부가 작고 것이다. 군영과 것은 우리의 이상의 불어 영락과 그리하였는가?`,
   },
   {
     id: 2,
-    name: "이름하여 이름하다",
+    name: "응원이 부적해",
     url: "https://www.instagram.com/likelion_ewha/",
-    titleimg: namingtitle,
+    titleimg: namingtitle2,
     oneline: "나만의 사전을 친구들과 함께 채워가요",
     detail: `목숨이 위하여, 눈에 봄바람이다. 인간의 대고, 불어 이상의 목숨이 이 있는가? 속잎나고, 기관과 설산에서 봄바람이다. 청춘의 것이 속에서 눈에 군영과 보이는 있으랴? 뭇 끓는 지혜는 사는가 싹이 풍부하게 않는 그들에게 하여도 것이다. 
         설레는 너의 내는 트고, 새 긴지라 아름다우냐? 우리 대중을 위하여서, 그들의 가진 같으며, 피부가 작고 것이다. 군영과 것은 우리의 이상의 불어 영락과 그리하였는가?`,
@@ -428,47 +428,6 @@ const RnRdata = [
   {
     id: 1,
     name: "응원이 부적해",
-    task: [
-      {
-        part: 1,
-        name: "박성연",
-        task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은`,
-      },
-      {
-        part: 1,
-        name: "김다은",
-        task: `맡은 일, 맡은 일 맡은 일, 맡은 일, 맡은 일`,
-      },
-      {
-        part: 2,
-        name: "정연주",
-        task: `맡은 일, 맡은 일 일, 맡은 일, 맡은 일, 맡은 일`,
-      },
-      {
-        part: 2,
-        name: "이서진",
-        task: `맡은 일, 맡은 일, 맡 맡은 일, 맡은 일, 맡은 일`,
-      },
-      {
-        part: 3,
-        name: "조현영",
-        task: `맡은 일, 맡은 일, 일, 맡은 일, 맡은 일, 맡은 일`,
-      },
-      {
-        part: 3,
-        name: "최유미",
-        task: `맡은 일맡은 일, 맡은 일`,
-      },
-      {
-        part: 3,
-        name: "이나경",
-        task: `맡은 일, 맡은 , 맡은 일, 맡은 일, 맡은 일`,
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "이름하여 이름하다",
     task: [
       {
         part: 1,
@@ -509,6 +468,47 @@ const RnRdata = [
         part: 3,
         name: "김정은",
         task: `맡은, 맡은 일맡은 일, 맡은 일`,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "이름하여 이름하다",
+    task: [
+      {
+        part: 1,
+        name: "박성연",
+        task: `맡은 일, 맡은 일, 맡은일, 맡은일, 맡은 일, 맡은`,
+      },
+      {
+        part: 1,
+        name: "김다은",
+        task: `맡은 일, 맡은 일 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 2,
+        name: "정연주",
+        task: `맡은 일, 맡은 일 일, 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 2,
+        name: "이서진",
+        task: `맡은 일, 맡은 일, 맡 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "조현영",
+        task: `맡은 일, 맡은 일, 일, 맡은 일, 맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "최유미",
+        task: `맡은 일맡은 일, 맡은 일`,
+      },
+      {
+        part: 3,
+        name: "이나경",
+        task: `맡은 일, 맡은 , 맡은 일, 맡은 일, 맡은 일`,
       },
     ],
   },

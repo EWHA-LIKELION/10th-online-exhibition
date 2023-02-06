@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import aurora from "../assets/main/aurora3.svg";
 import subtract from "../assets/likelion/subtract2.svg";
 import whitearrow from "../assets/likelion/whitearrow.svg";
-
+import group from "../assets/likelion/group2.png";
 import activity1 from "../assets/likelion/activity1.png";
 import activity2 from "../assets/likelion/activity2.png";
 import activity3 from "../assets/likelion/activity3.png";
@@ -43,14 +43,22 @@ const Likelion = () => {
   };
   return (
     <>
-      <TopBar></TopBar>
       <Container>
-        <ImageWrapper>멋사 10기 단체 사진</ImageWrapper>
-        <TilteBar>
-          <div>이화여자대학교</div>
-          <br />
-          <div>멋쟁이사자처럼 10기</div>
-        </TilteBar>
+        <ImageWrapper
+          style={{
+            backgroundImage: `url(${group.src})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
+          <TopBar></TopBar>
+          <TilteBar>
+            <div>이화여자대학교</div>
+            <br />
+            <div>멋쟁이사자처럼 10기</div>
+          </TilteBar>
+        </ImageWrapper>
+
         <Background>
           <TextWrapper>
             <MiniTitle>
@@ -73,12 +81,11 @@ const Likelion = () => {
               <DottedLine width="57vw"></DottedLine>
             </MiniTitle>
             <div className="text">
-              피가 봄바람을 못하다 노래하며 뭇 석가는 구할 힘있다. 품고 무엇이
-              소금이라 공자는 피부가 부패뿐이다. 갑 그들은 남는 현저하게 별과
-              것이다. 갑 있는 미묘한 심장은 청춘의 그들은 주며, 희망의 쓸쓸하랴?
-              가슴이 피어나는 구하지 타오르고 곧 피부가 인생을 피고, 부패뿐이다.
-              그들의 찬미를 광야에서 그들은 없으면, 하는 청춘에서만 두기
-              노년에게서 칼이다.{" "}
+              멋쟁이사자처럼은 대학생을 대상으로 개발 교육과 프로젝트 경험을
+              제공하는 전국 단위 웹 개발 동아리입니다. 2022년을 기준으로 42개
+              대학이 소속되어 있습니다. 이화여대 멋쟁이사자처럼 10기는 3명의
+              운영진과 16명의 아기사자로 구성되어있으며, 기획디자인, 백엔드,
+              프론트엔드로 트랙을 나누어 활동을 진행했습니다.
             </div>
           </TextWrapper>
           <TextWrapper>
@@ -108,8 +115,8 @@ const Likelion = () => {
                   <div className="content">Github와 버전 관리</div>
                 </TextBox>
                 <TextBox>
-                  <div className="title">아이디어톤</div>
-                  <div className="content">중앙해커톤 서비스 기획</div>
+                  <div className="title">해커톤 출전</div>
+                  <div className="content">여기톤, 중앙 해커톤, 신촌톤 </div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
@@ -119,11 +126,11 @@ const Likelion = () => {
               <TrackBox2>
                 <TextBox>
                   <div className="title">역기획서 #1</div>
-                  <div className="content">어쩌구저쩌구 내용</div>
+                  <div className="content">역기획서, 고객 페르소나</div>
                 </TextBox>
                 <TextBox>
                   <div className="title">역기획서 #2</div>
-                  <div className="content">어쩌구저쩌구 내용</div>
+                  <div className="content">서비스 기획서 프로젝트</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
@@ -131,12 +138,12 @@ const Likelion = () => {
               <img className="subtract" src={subtract.src}></img>
               <TrackBox2>
                 <TextBox>
-                  <div className="title">PM과 문제정의</div>
-                  <div className="content">어쩌구저쩌구 내용</div>
+                  <div className="title">PM과 문제 정의</div>
+                  <div className="content">문제 정의와 비즈니스 모델</div>
                 </TextBox>
                 <TextBox>
                   <div className="title">기획자와 UX</div>
-                  <div className="content">어쩌구저쩌구 내용</div>
+                  <div className="content">피그마, UX 디자인 교육</div>
                 </TextBox>
               </TrackBox2>
             </TrackBox>
@@ -355,6 +362,11 @@ const Likelion = () => {
 export default Likelion;
 
 const Container = styled.div`
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: auto;
+  }
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -363,14 +375,22 @@ const Container = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  display: flex;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  height: 90px;
+  height: 256px;
   font-family: "Pretendard-Regular";
 `;
 
 const TilteBar = styled.div`
+  position: absolute;
+  padding-bottom: 15px;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  color: white;
   display: flex;
   flex-direction: column;
   height: 80px;
@@ -384,7 +404,6 @@ const TilteBar = styled.div`
 `;
 
 const Background = styled.div`
-  margin-top: 30px;
   position: relative;
 
   ::after {
@@ -552,6 +571,9 @@ const InstaImage = styled.div`
 `;
 
 const Recruiting = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
   width: 260px;
   height: 41px;
 

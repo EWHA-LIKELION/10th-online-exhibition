@@ -12,11 +12,11 @@ import "swiper/css/pagination";
 import "swiper/css/effect-cards";
 import { data } from "./api/lionsdata";
 
-const Makers = () => {
+const Lions = () => {
 	// 0: 운영진, 1: 기획디자인, 2: 프론트엔드, 3: 백엔드
 	const [team, setTeam] = useState(0);
 	return (
-		<>
+		<Div>
 			<Container>
 				<TopBar>10기 부원 소개</TopBar>
 				<Swiper
@@ -49,23 +49,47 @@ const Makers = () => {
 				<div className="padding" />
 				<Ticket arr={data[team].member} />
 			</Container>
-			<Footer />
-		</>
+			<div className="footer-container">
+				<Footer isAbsolute={true} />
+			</div>
+		</Div>
 	);
 };
 
-export default Makers;
+export default Lions;
+
+const Div = styled.div`
+	width: 100%;
+	height: auto;
+	z-index: 1000;
+	margin: 0;
+	padding: 0;
+	@media screen and (min-width: 440px) {
+		width: 390px;
+		height: auto;
+	}
+	.footer-container {
+		position: relative;
+		width: 100%;
+		height: 130px;
+	}
+`;
 
 const Container = styled.div`
 	width: 100%;
 	height: auto;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background-color: #fff;
-	padding-bottom: 60px;
 	overflow: hidden;
+	padding-bottom: 50px;
+	@media screen and (min-width: 440px) {
+		width: 390px;
+		height: auto;
+	}
 	.padding {
 		height: 20px;
 	}

@@ -38,7 +38,8 @@ const Likelion = () => {
   };
   // 아기사자 리크루팅 노션 이동
   const onClicktoNotion = () => {
-    const url = "https://www.notion.com";
+    const url =
+      "https://www.notion.so/likelion-ewha-11/11-2ab91fabd297476faaa878a526f69cca";
     window.open(url);
   };
   return (

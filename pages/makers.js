@@ -20,25 +20,25 @@ const Members_design = [
     id: 1,
     name: "곽은진",
     grade: "커뮤니케이션미디어학부 18",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    describtion: "와이어프레임 - detail, lions, makers 페이지, footer ",
   },
   {
     id: 2,
     name: "김다은",
-    grade: "커뮤니케이션미디어학부 18",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    grade: "국어국문학과 21",
+    describtion: "상세 디자인 - main, lions 페이지",
   },
   {
     id: 3,
     name: "박성연",
-    grade: "커뮤니케이션미디어학부 18",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    grade: "생명과학과 18",
+    describtion: "와이어프레임 - main, Likelion 페이지",
   },
   {
     id: 4,
     name: "신다윤",
-    grade: "커뮤니케이션미디어학부 18",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    grade: "컴퓨터공학 전공 18",
+    describtion: "상세 디자인 - detail, Likelion 페이지",
   },
 ];
 
@@ -46,26 +46,26 @@ const Members_front = [
   {
     id: 1,
     name: "정다윤",
-    grade: "컴퓨터공학전공 20",
-    describtion: "프론트엔드 개발 팀 리드, 메인 페이지 제작",
+    grade: "컴퓨터공학 전공 20",
+    describtion: " main 페이지 개발",
   },
   {
     id: 2,
     name: "이서진",
-    grade: "컴퓨터공학전공 21",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    grade: "컴퓨터공학 전공 21",
+    describtion: "lions 페이지 개발",
   },
   {
     id: 3,
     name: "정연주",
-    grade: "사이버보안전공 20",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    grade: "사이버보안 전공 20",
+    describtion: "Likelion 페이지, makers 페이지 개발",
   },
   {
     id: 4,
     name: "허윤",
     grade: "커뮤니케이션미디어학부 21",
-    describtion: "기획 디자인 팀 리드\n2차 디자인 전반 수정 및 제작",
+    describtion: "detail 페이지 개발",
   },
 ];
 const Makers = () => {
@@ -87,7 +87,9 @@ const Makers = () => {
         <img src={makers7.src} className="img7" />
         <Title>
           <div>LIKELION EWHA 10기</div>
-          <div>졸업프로젝트 전시 사이트를 만든이들</div>
+          <div style={{ marginTop: "8px" }}>
+            졸업프로젝트 전시 사이트를 만든이들
+          </div>
         </Title>
         <Line />
         <TeamBox>
@@ -261,7 +263,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 170px;
+  margin-top: 100px;
   font-family: "Pretendard-Regular";
   font-weight: 300;
   font-size: 14px;

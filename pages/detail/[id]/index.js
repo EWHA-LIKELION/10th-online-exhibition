@@ -27,7 +27,16 @@ const Detail = (props) => {
 
   return (
     <Wrapper>
-      <Container>
+      <Container
+        style={{
+          backgroundImage: `url(${backimg.src})`,
+          backgroundSize: "cover",
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        {/* <Image src={backimg.src} className="background" fill /> */}
+
         <TopBar>
           <Link href="/">
             <Image src={back.src} width={12} height={24} alt="back" />
@@ -190,10 +199,8 @@ const Detail = (props) => {
             </VisitBtn>
           </Link>
         </div>
-
-        <img src={backimg.src} className="background" />
+        <Footer />
       </Container>
-      <Footer isAbsolute={false} />
     </Wrapper>
   );
 };
@@ -219,16 +226,19 @@ export const getStaticPaths = async () => {
 
 const Wrapper = styled.div`
   position: relative;
-  padding-bottom: 90px;
-`;
-const Container = styled.div`
-  overflow: hidden;
-  position: relative;
-
   @media screen and (min-width: 440px) {
     width: 390px;
     height: auto;
   }
+`;
+const Container = styled.div`
+  @media screen and (min-width: 440px) {
+    width: 390px;
+    height: auto;
+  }
+
+  padding-bottom: 120px;
+  position: relative;
 
   &::-webkit-scrollbar {
     display: none;
@@ -432,7 +442,7 @@ const RnRdata = [
       {
         part: 1,
         name: "곽은진",
-        task: `맡은 일, 맡맡은 일`,
+        task: `맡은 일, 맡맡은 일,맡맡은 일맡맡은 일`,
       },
       {
         part: 1,

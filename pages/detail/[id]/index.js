@@ -31,8 +31,6 @@ import git from "../../../assets/detail/git.svg";
 // ui 이미지
 import team1 from "../../../assets/2team/imgs";
 
-import img1 from "../../../assets/2team/img1.png";
-
 const Detail = (props) => {
   const [w, setW] = useState(0);
 

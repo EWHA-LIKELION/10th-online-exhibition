@@ -50,6 +50,7 @@ const Detail = (props) => {
           <Link href="/">
             <Image src={back.src} width={12} height={24} alt="back" />
           </Link>
+
           <Image
             src={Introducedata[id - 1].titleimg}
             width={300}
@@ -74,13 +75,19 @@ const Detail = (props) => {
             "flex-direction": "column",
           }}
         >
-          <Image
-            src={introduceimg.src}
-            width={358}
-            height={38}
-            alt="introduceimg"
+          <object
+            type="image/svg+xml"
+            data={introduceimg.src}
             className="index"
-          />
+          >
+            <Image
+              src={introduceimg.src}
+              width={358}
+              height={38}
+              alt="introduceimg"
+              className="index"
+            />
+          </object>
 
           <Introoduce>
             <p className="title">{Introducedata[id - 1].oneline}</p>
@@ -93,13 +100,15 @@ const Detail = (props) => {
             })}
           </Slider>
 
-          <Image
-            src={rnrimg.src}
-            width={358}
-            height={38}
-            alt="rnrimg"
-            className="index"
-          />
+          <object type="image/svg+xml" data={rnrimg.src} className="index">
+            <Image
+              src={rnrimg.src}
+              width={358}
+              height={38}
+              alt="rnrimg"
+              className="index"
+            />
+          </object>
 
           <RnR>
             <span className="part-name">기획 디자인</span>
@@ -148,13 +157,19 @@ const Detail = (props) => {
             </TaskBox>
           </RnR>
 
-          <Image
-            src={techstackimg.src}
-            width={358}
-            height={38}
-            alt="techstackimg"
+          <object
+            type="image/svg+xml"
+            data={techstackimg.src}
             className="index"
-          />
+          >
+            <Image
+              src={techstackimg.src}
+              width={358}
+              height={38}
+              alt="techstackimg"
+              className="index"
+            />
+          </object>
 
           <TechBox>
             <p className="part-name">기획 디자인</p>

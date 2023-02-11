@@ -63,7 +63,7 @@ export default function Home() {
           loading="lazy"
         />
         <Letter top="224px" text="이름하여 이름하다" id="1" />
-        <Letter top="420px" text="응원이 부적해 !" id="2" />
+        <Letter top="420px" text="응원이 부적해" id="2" />
       </div>
     </Div>
   );

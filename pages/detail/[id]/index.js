@@ -27,10 +27,10 @@ const Detail = (props) => {
 
   useEffect(() => {
     setW((window.innerWidth - 30).toString() + "px");
-    console.log(w);
   });
 
   const { id } = props;
+
   const Data = Introducedata[id - 1];
   const Task = RnRdata[id - 1].task;
   const Tech = Techdata[id - 1];
@@ -291,6 +291,7 @@ const Card = styled.img`
   margin-left: 8px;
   width: 140px;
   height: 268px;
+  border-radius: 10px;
 `;
 
 const Wrapper = styled.div`

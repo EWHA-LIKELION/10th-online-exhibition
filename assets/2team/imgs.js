@@ -1,15 +1,15 @@
-import img1 from "./img1.svg";
-import img2 from "./img2.svg";
-import img3 from "./img3.svg";
-import img4 from "./img4.svg";
-import img5 from "./img5.svg";
-import img6 from "./img6.svg";
-import img7 from "./img7.svg";
-import img8 from "./img8.svg";
-import img9 from "./img9.svg";
-import img10 from "./img10.svg";
-import img11 from "./img11.svg";
-import img12 from "./img12.svg";
+import img1 from "./img1.png";
+import img2 from "./img2.png";
+import img3 from "./img3.png";
+import img4 from "./img4.png";
+import img5 from "./img5.png";
+import img6 from "./img6.png";
+import img7 from "./img7.png";
+import img8 from "./img8.png";
+import img9 from "./img9.png";
+import img10 from "./img10.png";
+import img11 from "./img11.png";
+import img12 from "./img12.png";
 
 export default [
   img1,

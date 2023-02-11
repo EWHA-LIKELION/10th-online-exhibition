@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 //이미지
-//import navbar from "../assets/main/navbar2.svg";
 import navbar from "../assets/main/navbar.svg";
 
 const Navbar = () => {

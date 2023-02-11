@@ -10,8 +10,8 @@ import django from "./detail/django.svg";
 import aws from "./detail/aws.svg";
 import git from "./detail/git.svg";
 
-import namingtitle1 from "./detail/namingtitle1.svg";
-import namingtitle2 from "./detail/namingtitle2.svg";
+import namingtitle1 from "./detail/namingtitle11.svg";
+import namingtitle2 from "./detail/namingtitle22.svg";
 
 //import thumbnail1 from "./1team/thumbnail.png";
 import thumbnail2 from "./2team/thumbnail.png";

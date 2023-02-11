@@ -380,8 +380,9 @@ const TopBar = styled.div`
 
   a {
     position: absolute;
-    top: 15px;
-    left: 30px;
+    top: -5px;
+    left: 15px;
+    padding: 20px;
   }
 
   .titleimg {

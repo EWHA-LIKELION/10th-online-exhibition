@@ -393,7 +393,7 @@ const ImageWrapper = styled.div`
 
   .logo {
     position: absolute;
-    top: 15px;
+    top: 13px;
     right: 10px;
   }
 `;

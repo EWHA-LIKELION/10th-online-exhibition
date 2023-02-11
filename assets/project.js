@@ -1,9 +1,11 @@
 // tech img
 import figma from "./detail/figma.svg";
-import ai from "./detail/ai.svg";
+import ai from "./detail/illustrator.svg";
 import react from "./detail/react.svg";
 import npm from "./detail/npm.svg";
+
 import github from "./detail/github.svg";
+
 import django from "./detail/django.svg";
 import aws from "./detail/aws.svg";
 import git from "./detail/git.svg";

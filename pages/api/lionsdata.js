@@ -1,29 +1,29 @@
-import frontall from "../../assets/lions/frontall.svg";
-import pmall from "../../assets/lions/pmall.svg";
-import backall from "../../assets/lions/backall.svg";
-import managerall from "../../assets/lions/managerall.svg";
+import frontall from "../../assets/lions/frontall.png";
+import pmall from "../../assets/lions/pmall.png";
+import backall from "../../assets/lions/backall.png";
+import managerall from "../../assets/lions/managerall.png";
 
-import manager1 from "../../assets/lions/manager1.svg";
-import manager2 from "../../assets/lions/manager2.svg";
-import manager3 from "../../assets/lions/manager3.svg";
+import manager1 from "../../assets/lions/manager1.png";
+import manager2 from "../../assets/lions/manager2.png";
+import manager3 from "../../assets/lions/manager3.png";
 
-import front1 from "../../assets/lions/front1.svg";
-import front2 from "../../assets/lions/front2.svg";
-import front3 from "../../assets/lions/front3.svg";
-import front4 from "../../assets/lions/front4.svg";
-import front5 from "../../assets/lions/front5.svg";
+import front1 from "../../assets/lions/front1.png";
+import front2 from "../../assets/lions/front2.png";
+import front3 from "../../assets/lions/front3.png";
+import front4 from "../../assets/lions/front4.png";
+import front5 from "../../assets/lions/front5.png";
 
-import pm1 from "../../assets/lions/pm1.svg";
-import pm2 from "../../assets/lions/pm2.svg";
-import pm3 from "../../assets/lions/pm3.svg";
-import pm4 from "../../assets/lions/pm4.svg";
+import pm1 from "../../assets/lions/pm1.png";
+import pm2 from "../../assets/lions/pm2.png";
+import pm3 from "../../assets/lions/pm3.png";
+import pm4 from "../../assets/lions/pm4.png";
 
-import back1 from "../../assets/lions/back1.svg";
-import back2 from "../../assets/lions/back2.svg"; // 이수언니
-import back3 from "../../assets/lions/back3.svg";
-import back4 from "../../assets/lions/back4.svg";
-import back5 from "../../assets/lions/back5.svg";
-import back6 from "../../assets/lions/back6.svg";
+import back1 from "../../assets/lions/back1.png";
+import back2 from "../../assets/lions/back2.png";
+import back3 from "../../assets/lions/back3.png";
+import back4 from "../../assets/lions/back4.png";
+import back5 from "../../assets/lions/back5.png";
+import back6 from "../../assets/lions/back6.png";
 
 export const data = [
   {

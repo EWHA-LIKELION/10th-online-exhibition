@@ -1,5 +1,5 @@
 // 멋사 10기 소개 페이지
-import react from "react";
+import Image from "next/image";
 import styled from "styled-components";
 
 // component
@@ -10,7 +10,9 @@ import Footer from "../components/Footer";
 import aurora from "../assets/main/aurora3.svg";
 import subtract from "../assets/likelion/subtract2.svg";
 import whitearrow from "../assets/likelion/whitearrow.svg";
-import group from "../assets/likelion/group2.png";
+import group from "../assets/likelion/group.png";
+import logo from "../assets/likelion/logo.svg";
+
 import activity1 from "../assets/likelion/activity1.png";
 import activity2 from "../assets/likelion/activity2.png";
 import activity3 from "../assets/likelion/activity3.png";
@@ -58,6 +60,7 @@ const Likelion = () => {
             <br />
             <div>멋쟁이사자처럼 10기</div>
           </TilteBar>
+          <Image src={logo.src} width={50} height={50} className="logo" />
         </ImageWrapper>
 
         <Background>
@@ -385,6 +388,14 @@ const ImageWrapper = styled.div`
   align-items: center;
   height: 256px;
   font-family: "Pretendard-Regular";
+
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
 `;
 
 const TilteBar = styled.div`

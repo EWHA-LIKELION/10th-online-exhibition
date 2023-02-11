@@ -15,6 +15,9 @@ import rnrimg from "../../../assets/detail/rnrimg.svg";
 import techstackimg from "../../../assets/detail/techstackimg.svg";
 import btnicon from "../../../assets/detail/btnicon.svg";
 
+import bluestar from "../../../assets/detail/bluestar.png";
+import yellowstar from "../../../assets/detail/yellowstar.png";
+
 import {
   Introducedata,
   RnRdata,
@@ -51,13 +54,30 @@ const Detail = (props) => {
             <Image src={back.src} width={12} height={24} alt="back" />
           </Link>
 
-          <Image
-            src={Introducedata[id - 1].titleimg}
-            width={300}
-            height={100}
-            className="titleimg"
-            alt="titleimg"
-          />
+          <div className="titleimg">
+            <Image
+              src={Introducedata[id - 1].titleimg}
+              width={287}
+              height={56}
+              alt="titleimg"
+            />
+
+            <Image
+              src={bluestar.src}
+              width={36}
+              height={40}
+              alt="bluestar"
+              className="bluestar"
+            />
+
+            <Image
+              src={yellowstar.src}
+              width={47}
+              height={49}
+              alt="yellowstar"
+              className="yellowstar"
+            />
+          </div>
         </TopBar>
 
         <Thumbnail>
@@ -351,18 +371,33 @@ const TopBar = styled.div`
   position: relative;
   top: 0;
   width: 100%;
-  height: 100px;
   margin-top: 30px;
+  margin-bottom: 18px;
 
   background-color: transparent;
   display: flex;
+  justify-content: center;
+
   a {
-    padding: 38px 20px;
     position: absolute;
+    top: 15px;
+    left: 30px;
   }
 
   .titleimg {
-    width: 100%;
+    position: relative;
+  }
+
+  .bluestar {
+    position: absolute;
+    top: -20px;
+    left: 25px;
+  }
+
+  .yellowstar {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
   }
 `;
 

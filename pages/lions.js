@@ -47,6 +47,7 @@ const Lions = () => {
           })}
         </Swiper>
         <div className="padding" />
+
         <Ticket arr={data[team].member} />
       </Container>
       <div className="footer-container">

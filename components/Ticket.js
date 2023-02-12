@@ -213,6 +213,7 @@ const TicketDiv = styled.div`
     font-size: 10px;
     text-align: center;
     color: #0c6625;
+    transform: translateX(5px);
   }
   .circle {
     width: 15px;
@@ -221,6 +222,7 @@ const TicketDiv = styled.div`
     background: #dddddd;
     display: flex;
     justify-content: center;
+    transform: translateX(5px);
   }
   .down {
     transform: rotate(270deg);

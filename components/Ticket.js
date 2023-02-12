@@ -80,7 +80,6 @@ const Ticket = (arr) => {
 };
 
 export default Ticket;
-
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -88,6 +87,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 10px;
   .close {
     display: none;
   }
@@ -125,13 +125,12 @@ const TicketDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   position: relative;
   z-index: 100;
   .ticket {
     position: absolute;
     width: 100%;
-
     filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.25));
   }
   .left,
@@ -216,13 +215,13 @@ const TicketDiv = styled.div`
     transform: translateX(5px);
   }
   .circle {
+    transform: translateX(5px);
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background: #dddddd;
     display: flex;
     justify-content: center;
-    transform: translateX(5px);
   }
   .down {
     transform: rotate(270deg);
@@ -237,7 +236,7 @@ const TextDiv = styled.div`
   background-color: #f9fff8;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 0 0 20px 20px;
-  margin: 3px 0 10px 0;
+  margin-bottom: 15px;
   .text-text {
     font-family: "Pretendard-Regular";
     font-size: 14px;
@@ -257,6 +256,6 @@ const TextDiv = styled.div`
     width: 72%;
   }
   @media screen and (min-width: 440px) {
-    width: 76%;
+    width: 80%;
   }
 `;

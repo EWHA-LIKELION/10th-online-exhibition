@@ -3,7 +3,7 @@ import figma from "./detail/figma.svg";
 import ai from "./detail/illustrator.svg";
 import react from "./detail/react.svg";
 import npm from "./detail/npm.svg";
-
+import pythonany from "./detail/pythonany.svg";
 import github from "./detail/github.svg";
 
 import django from "./detail/django.svg";
@@ -13,10 +13,10 @@ import git from "./detail/git.svg";
 import namingtitle1 from "./detail/namingtitle11.svg";
 import namingtitle2 from "./detail/namingtitle22.svg";
 
-//import thumbnail1 from "./1team/thumbnail.png";
+import thumbnail1 from "./1team/thumbnail.png";
 import thumbnail2 from "./2team/thumbnail.png";
 
-//import team1 from "./1team/imgs";
+import team1 from "./1team/imgs";
 import team2 from "./2team/imgs";
 
 export const Introducedata = [
@@ -25,10 +25,10 @@ export const Introducedata = [
     name: "이름하여 이름하다",
     url: "https://naming.swygbro.com/",
     titleimg: namingtitle1,
-    thumbnail: thumbnail2,
-    oneline: "나만의 사전을 친구들과 함께 채워가요",
-    detail: `목숨이 위하여, 눈에 봄바람이다. 인간의 대고, 불어 이상의 목숨이 이 있는가? 속잎나고, 기관과 설산에서 봄바람이다. 청춘의 것이 속에서 눈에 군영과 보이는 있으랴? 뭇 끓는 지혜는 사는가 싹이 풍부하게 않는 그들에게 하여도 것이다. 
-      설레는 너의 내는 트고, 새 긴지라 아름다우냐? 우리 대중을 위하여서, 그들의 가진 같으며, 피부가 작고 것이다. 군영과 것은 우리의 이상의 불어 영락과 그리하였는가?`,
+    thumbnail: thumbnail1,
+    oneline: "다른 사람이 적어주는 나의 정의를 모아 사전을 만들어보세요!",
+    detail:
+      "이름하여 이름하다는 자신에 대한 정의를 주변인들로부터 모아 나만의 사전을 만들 수 있는 서비스입니다. 00하다에 사전 주인의 이름을 넣을 수 있고, 사전의 특성을 살려 자음별로 정의를 모아볼 수 있게 하였으며 처음 작성할 때엔 시작해야하는 자음을 랜덤으로 배정해 약간의 강제성이 섞인 재미를 더했습니다.",
   },
   {
     id: 2,
@@ -51,42 +51,42 @@ export const RnRdata = [
       {
         part: 1,
         name: "곽은진",
-        task: `맡은 일, 맡맡은 일,맡맡은 일맡맡은 일`,
+        task: "방문자 와이어프레임, 정의 작성 가이드, 자음 랜덤 배정, 정의 작성 모달, 사전 표지 사전 실루엣 디자인, 전체 페이지 2차 디자인",
       },
       {
         part: 1,
         name: "신다윤",
-        task: `맡은 일, 맡, 맡은 일, 맡은 일, 맡은 일`,
+        task: "회원가입 와이어프레임, 사전 커스텀, 검색 사전 표지 디자인, 전체 페이지 1차 디자인",
       },
       {
         part: 2,
         name: "김민주",
-        task: `맡은 일, 맡은 일맡은 일`,
+        task: "가입자 홈화면, 정의 구경하기, 사전 검색 사이드바",
       },
       {
         part: 2,
         name: "이채원",
-        task: `맡은 일, 맡은 일 맡은 일, 맡은 일, 맡은 일`,
+        task: "로그인/회원가입, 사전 커스텀, 사전 공유, 유저인증, 페이지 라우팅, 방문자 정의 구경하기, 정의 추가 작성, 만든이들",
       },
       {
         part: 2,
         name: "허윤",
-        task: `맡은 일, 맡일, 맡 맡은 일, 맡은 일`,
+        task: "방문자 홈화면, 정의 작성 초기 화면, 정의 작성 안내, 방문자 이름 작성 모달",
       },
       {
         part: 3,
         name: "신이수",
-        task: `맡은 일, 맡은 일맡은 일, 맡은 일, 맡은 일`,
+        task: "회원가입, 로그인 개발",
       },
       {
         part: 3,
         name: "임채영",
-        task: `맡은 일, 맡은일, 맡은 일, 맡은 일`,
+        task: "사전 검색, 정의 써준 사람 조회, 방문자 이름 받기, 정의 좋아요, 삭제 기능",
       },
       {
         part: 3,
         name: "김정은",
-        task: `맡은, 맡은 일맡은 일, 맡은 일`,
+        task: "사전 만들기, 사전 커스텀 값 조회, 자음별 정의 조회, 정의 작성 & 삭제",
       },
     ],
   },
@@ -148,7 +148,7 @@ export const Techdata = [
     ],
     tech3: [
       { src: django, alt: "django", part: 3 },
-      { src: aws, alt: "aws", part: 3 },
+      { src: pythonany, alt: "pythonany", part: 3 },
       { src: git, alt: "git", part: 3 },
     ],
   },
@@ -173,4 +173,4 @@ export const Techdata = [
   },
 ];
 
-export const CardSliderData = [team2, team2];
+export const CardSliderData = [team1, team2];

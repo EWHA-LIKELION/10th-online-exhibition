@@ -30,7 +30,6 @@ const Lions = () => {
           className="mySwiper"
           onSlideChange={(swiperCore) => {
             const { activeIndex } = swiperCore;
-            console.log({ activeIndex });
             setTeam(activeIndex);
           }}
         >

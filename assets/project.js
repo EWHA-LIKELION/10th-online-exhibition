@@ -23,7 +23,7 @@ export const Introducedata = [
   {
     id: 1,
     name: "이름하여 이름하다",
-    url: "https://www.instagram.com/likelion_ewha/",
+    url: "https://naming.swygbro.com/",
     titleimg: namingtitle1,
     thumbnail: thumbnail2,
     oneline: "나만의 사전을 친구들과 함께 채워가요",

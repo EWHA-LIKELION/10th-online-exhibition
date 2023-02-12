@@ -69,7 +69,7 @@ const Likelion = () => {
               <div className="title">활동기간</div>
               <DottedLine width="70vw"></DottedLine>
             </MiniTitle>
-            <div className="text">2022.03 - 2023. 01</div>
+            <div className="text">2022.03 - 2023.01</div>
           </TextWrapper>
 
           <TextWrapper>

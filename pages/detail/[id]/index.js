@@ -39,8 +39,6 @@ const Detail = (props) => {
   const Tech = Techdata[id - 1];
   const CardData = CardSliderData[id - 1];
 
-  console.log(Tech);
-
   return (
     <Wrapper>
       <Container
